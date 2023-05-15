@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap-datepicker3.min.css">
+  <link rel="stylesheet" href="css/index.min.css">
+</head>
+
+<body>
+
+  <header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <img class="logo" src="images/logo.png" alt="Логотип Nomad">
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#">
+              <!-- <svg class="menu__plus">
+                <use xlink:href="images/sprite.svg#plus"></use>
+              </svg> -->
+              <svg class="menu__plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                width="24px" height="24px" role="img" aria-label="Вход в личный кабинет">
+                <path fill-rule="evenodd"
+                  d="M 11 2 L 11 11 L 2 11 L 2 13 L 11 13 L 11 22 L 13 22 L 13 13 L 22 13 L 22 11 L 13 11 L 13 2 Z" />
+              </svg>
+              Войти
+            </a>
+          </li>
+          <li class="menu__item menu__item-second">
+            <a class="menu__link" href="#">
+              <svg class="menu__plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                width="24px" height="24px" role="img" aria-label="Регистрация">
+                <path fill-rule="evenodd"
+                  d="M 11 2 L 11 11 L 2 11 L 2 13 L 11 13 L 11 22 L 13 22 L 13 13 L 22 13 L 22 11 L 13 11 L 13 2 Z" />
+              </svg>
+              Зарегистрироваться
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link menu__link--last" href="#">
+              <svg class="menu__plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                width="24px" height="24px" role="img" aria-label="Новая поездка">
+                <path fill-rule="evenodd"
+                  d="M 11 2 L 11 11 L 2 11 L 2 13 L 11 13 L 11 22 L 13 22 L 13 13 L 22 13 L 22 11 L 13 11 L 13 2 Z" />
+              </svg>
+              Новая поездка
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+
+      <!-- Бургер меню -->
+      <div class="head">
+        <nav class="nav" data-nav>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link-sign">Войти
+                <svg class="nav__sign nav-icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24"
+                  viewBox="0 0 24 24" role="img" aria-label="Вход в аккаунт">
+                  <path
+                    d="M11,10V12H10V14H8V12H5.83C5.42,13.17 4.31,14 3,14A3,3 0 0,1 0,11A3,3 0 0,1 3,8C4.31,8 5.42,8.83 5.83,10H11M3,10A1,1 0 0,0 2,11A1,1 0 0,0 3,12A1,1 0 0,0 4,11A1,1 0 0,0 3,10M16,14C18.67,14 24,15.34 24,18V20H8V18C8,15.34 13.33,14 16,14M16,12A4,4 0 0,1 12,8A4,4 0 0,1 16,4A4,4 0 0,1 20,8A4,4 0 0,1 16,12Z" />
+                </svg>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link-setting">Настройки
+                <svg class="nav__setting nav-icon"  fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="507.451px" height="507.45px"
+                  viewBox="0 0 507.451 507.45" style="enable-background:new 0 0 507.451 507.45;" xml:space="preserve"  role="img" aria-label="Настройки">
+                  <g>
+                    <g id="settings">
+                      <path d="M440.813,280.5c0-7.65,2.55-15.3,2.55-25.5s0-17.85-2.55-25.5l53.55-43.35c5.1-5.1,5.1-10.2,2.55-15.3l-51-89.25
+			c-2.55-2.55-7.649-5.1-15.3-2.55l-63.75,25.5c-12.75-10.2-28.05-17.85-43.35-25.5l-10.2-66.3C315.863,5.1,308.212,0,303.113,0
+			h-102c-5.101,0-12.75,5.1-12.75,10.2l-10.2,68.85c-15.3,5.1-28.05,15.3-43.35,25.5l-61.2-25.5c-7.65-2.55-12.75,0-17.851,5.1
+			l-51,89.25c-2.55,2.55,0,10.2,5.1,15.3l53.55,40.8c0,7.65-2.55,15.3-2.55,25.5s0,17.85,2.55,25.5l-53.55,43.35
+			c-5.1,5.101-5.1,10.2-2.55,15.301l51,89.25c2.55,2.55,7.649,5.1,15.3,2.55l63.75-25.5c12.75,10.2,28.05,17.85,43.35,25.5
+			l10.2,66.3c0,5.1,5.1,10.2,12.75,10.2h102c5.101,0,12.75-5.101,12.75-10.2l10.2-66.3c15.3-7.65,30.6-15.3,43.35-25.5l63.75,25.5
+			c5.101,2.55,12.75,0,15.301-5.101l51-89.25c2.55-5.1,2.55-12.75-2.551-15.3L440.813,280.5z M252.113,344.25
+			c-48.45,0-89.25-40.8-89.25-89.25s40.8-89.25,89.25-89.25s89.25,40.8,89.25,89.25S300.563,344.25,252.113,344.25z" />
+                    </g>
+                  </g>
+                </svg>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link-registr">Зарегистрироваться
+                <svg class="nav__registr nav-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Регистрация">
+                  <path d="M6.25 2.75C5.42157 2.75 4.75 3.42157 4.75 4.25V19.75C4.75 20.5784 5.42157 21.25 6.25 21.25H12.1902C11.4405 20.1905 11 18.8967 11 17.5C11 13.9101 13.9101 11 17.5 11C18.1063 11 18.6932 11.083 19.25 11.2383V4.25C19.25 3.42157 18.5784 2.75 17.75 2.75H6.25ZM8.5 13.25C7.67157 13.25 7 12.5784 7 11.75C7 10.9216 7.67157 10.25 8.5 10.25C9.32843 10.25 10 10.9216 10 11.75C10 12.5784 9.32843 13.25 8.5 13.25ZM17.5 23C20.5376 23 23 20.5376 23 17.5C23 14.4624 20.5376 12 17.5 12C14.4624 12 12 14.4624 12 17.5C12 20.5376 14.4624 23 17.5 23ZM21 17.5C21 17.7761 20.7761 18 20.5 18H15.7071L17.3536 19.6464C17.5488 19.8417 17.5488 20.1583 17.3536 20.3536C17.1583 20.5488 16.8417 20.5488 16.6464 20.3536L14.1464 17.8536C13.9512 17.6583 13.9512 17.3417 14.1464 17.1464L16.6464 14.6464C16.8417 14.4512 17.1583 14.4512 17.3536 14.6464C17.5488 14.8417 17.5488 15.1583 17.3536 15.3536L15.7071 17H20.5C20.7761 17 21 17.2239 21 17.5Z" fill="#212121"/>
+                  </svg>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link-search">Новая поездка
+                <svg class="nav__search nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Новая поездка">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M14.2939 12.5786H13.3905L13.0703 12.2699C14.191 10.9663 14.8656 9.27387 14.8656 7.43282C14.8656 3.32762 11.538 0 7.43282 0C3.32762 0 0 3.32762 0 7.43282C0 11.538 3.32762 14.8656 7.43282 14.8656C9.27387 14.8656 10.9663 14.191 12.2699 13.0703L12.5786 13.3905V14.2939L18.2962 20L20 18.2962L14.2939 12.5786ZM7.43282 12.5786C4.58548 12.5786 2.28702 10.2802 2.28702 7.43282C2.28702 4.58548 4.58548 2.28702 7.43282 2.28702C10.2802 2.28702 12.5786 4.58548 12.5786 7.43282C12.5786 10.2802 10.2802 12.5786 7.43282 12.5786Z" fill="#5C5F64"/>
+                  </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="burger" data-burger aria-label="Открыть меню" aria-expanded="false">
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </div>
+    <div class="overlay"></div>
+
+  </div>
+</header>
+
+  <main class="main main-index">
+    <div class="under-header">
+  <div class="under-header__inner">
+    <div class="blog-search" style="background-image: url(images/under-header/background.png);">
+      <div class="blog-search__wrapper">
+        <h2 class="blog-search__title">
+          Знакомьтесь с новыми <span>Людьми</span>
+        </h2>
+        <p class="blog-search__text">
+          Знакомьтесь с людьми из тысячи городов. Нет лучше способа окунуться в новую культуру, чем провести время с
+          местными жителями. Посетите вместе интересные места, достопримечательности или рестораны с местной кухней!
+        </p>
+        <form class="blog-search__form" action="#">
+          <div class="blog-search__form-input">
+            <svg class="blog-search__place" role="img" aria-label="Поиск людей" width="11" height="16" viewBox="0 0 11 16" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 0C2.45929 0 0 2.504 0 5.6C0 9.8 5.5 16 5.5 16C5.5 16 11 9.8 11 5.6C11 2.504 8.54071 0 5.5 0ZM5.5 7.6C4.41571 7.6 3.53571 6.704 3.53571 5.6C3.53571 4.496 4.41571 3.6 5.5 3.6C6.58429 3.6 7.46429 4.496 7.46429 5.6C7.46429 6.704 6.58429 7.6 5.5 7.6Z" fill=""/>
+              </svg>
+            <input id="blog__search-input" class="blog-search__form-find" required type="text" placeholder="Где бы вы хотели найти людей?" onkeypress="noDigits(event)" name="input1" minlength="6">
+          </div>
+          <div id="sandbox-container" class="sandbox">
+            <svg class="blog-search__date" role="img" aria-label="Выбрать дату" width="14" height="16" viewBox="0 0 14 16" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66667 7.2H3.11111V8.8H4.66667V7.2ZM7.77778 7.2H6.22222V8.8H7.77778V7.2ZM10.8889 7.2H9.33333V8.8H10.8889V7.2ZM12.4444 1.6H11.6667V0H10.1111V1.6H3.88889V0H2.33333V1.6H1.55556C0.692222 1.6 0.00777778 2.32 0.00777778 3.2L0 14.4C0 15.28 0.692222 16 1.55556 16H12.4444C13.3 16 14 15.28 14 14.4V3.2C14 2.32 13.3 1.6 12.4444 1.6ZM12.4444 14.4H1.55556V5.6H12.4444V14.4Z" fill=""/>
+              </svg>             
+            <input type="text" class="form-control" required placeholder="Выберите дату" name="input2" readonly>
+          </div>
+          <button class="blog-search__form-link" type="submit" >
+            Поиск
+            <svg class="blog-search__angle" width="16" height="16" viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Поиск" fill="currentColor">
+              <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="currentColor" />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+    
+    <!-- Отображение гугл карты -->
+    <div id="map"></div>
+    <div class="map">
+      <div class="map__wrapper">
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="slider">
+  <div class="slider__wrapper">
+    <h3 class="slider__title">
+      Последние объявления
+    </h3>
+    <svg class="slider__fill" fill="currentColor" role="img" aria-label="Декортивный эелемент" width="118" height="9"
+      viewBox="0 0 118 9" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M98.3314 9C93.0795 9 90.4411 7.14254 87.8894 5.34635C85.501 3.66508 83.2454 2.07692 78.6628 2.07692C74.0813 2.07692 71.8257 3.66508 69.4376 5.34635C66.8863 7.14254 64.2483 9 58.9974 9C53.7458 9 51.1074 7.14254 48.5564 5.34635C46.1683 3.66508 43.9124 2.07692 39.3309 2.07692C34.7494 2.07692 32.4938 3.66508 30.1057 5.34635C27.5547 7.14254 24.9167 9 19.6654 9C14.4142 9 11.7762 7.14254 9.22521 5.34635C6.83746 3.66508 4.58185 2.07692 0 2.07692V0C5.25123 0 7.88925 1.85746 10.4406 3.65365C12.8283 5.33492 15.0839 6.92308 19.6654 6.92308C24.2469 6.92308 26.5026 5.33492 28.8907 3.65365C31.442 1.85746 34.08 0 39.3309 0C44.5821 0 47.2201 1.85746 49.7715 3.65365C52.1596 5.33492 54.4152 6.92308 58.9974 6.92308C63.5789 6.92308 65.8341 5.33492 68.2222 3.65365C70.7736 1.85746 73.4116 0 78.6628 0C83.9147 0 86.5531 1.85712 89.1048 3.65365C91.4933 5.33492 93.7492 6.92308 98.3314 6.92308C102.914 6.92308 105.169 5.33492 107.558 3.65365C110.109 1.85746 112.748 0 118 0V2.07692C113.417 2.07692 111.161 3.66508 108.773 5.34635C106.221 7.14288 103.583 9 98.3314 9"
+        fill="url(#paint0_linear_0_2278)" />
+      <defs>
+        <linearGradient id="paint0_linear_0_2278" x1="0" y1="9" x2="118" y2="9" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#F86B6A" />
+          <stop offset="1" stop-color="#FD954E" />
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+  <div class="slider__inner">
+    <a class="slider__link" href="#">
+      <div class="cart-people">
+        <div class="cart-people__wrapper-img">
+          <img class="cart-people__img" src="images/slider/slider-img1.jpg" alt="Профильная фотография">
+        </div>
+        <div class="cart-people__content">
+          <div class="cart-people__point">
+            <svg class="cart-people__icon" fill="currentColor" role="img" aria-label="Местоположение" width="11"
+              height="16" viewBox="0 0 11 16" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M5.5 0C2.45929 0 0 2.504 0 5.6C0 9.8 5.5 16 5.5 16C5.5 16 11 9.8 11 5.6C11 2.504 8.54071 0 5.5 0ZM5.5 7.6C4.41571 7.6 3.53571 6.704 3.53571 5.6C3.53571 4.496 4.41571 3.6 5.5 3.6C6.58429 3.6 7.46429 4.496 7.46429 5.6C7.46429 6.704 6.58429 7.6 5.5 7.6Z"
+                />
+            </svg>
+            Болгария
+          </div>
+          <h4 class="cart-people__point-title">
+            Пловдив
+          </h4>
+          <ul class="cart-people__list">
+            <li class="cart-people__item cart-people--data">
+              2 Авг, 2022 - 24 Авг, 2022
+            </li>
+            <li class="cart-people__item cart-people--icon">
+              1 Взрослый <span>/</span> 3 Ребёнка
+            </li>
+          </ul>
+        </div>
+      </div>
+    </a>
+    <a class="slider__link" href="#">
+      <div class="cart-people">
+        <div class="cart-people__wrapper-img">
+          <img class="cart-people__img" src="images/slider/slider-img2.jpg" alt="Профильная фотография">
+        </div>
+        <div class="cart-people__content">
+          <div class="cart-people__point">
+            <svg class="cart-people__icon" fill="currentColor" role="img" aria-label="Местоположение" width="11"
+              height="16" viewBox="0 0 11 16" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M5.5 0C2.45929 0 0 2.504 0 5.6C0 9.8 5.5 16 5.5 16C5.5 16 11 9.8 11 5.6C11 2.504 8.54071 0 5.5 0ZM5.5 7.6C4.41571 7.6 3.53571 6.704 3.53571 5.6C3.53571 4.496 4.41571 3.6 5.5 3.6C6.58429 3.6 7.46429 4.496 7.46429 5.6C7.46429 6.704 6.58429 7.6 5.5 7.6Z"
+                />
+            </svg>
+            Сербия
+          </div>
+          <h4 class="cart-people__point-title">
+            Смедерево
+          </h4>
+          <ul class="cart-people__list">
+            <li class="cart-people__item cart-people--data">
+              17 Июл, 2022 - 8 Авг, 2022
+            </li>
+            <li class="cart-people__item cart-people--icon">
+              2 Взрослых <span>/</span> 2 Ребёнка
+            </li>
+          </ul>
+        </div>
+      </div>
+    </a>
+    <a class="slider__link" href="#">
+      <div class="cart-people">
+        <div class="cart-people__wrapper-img">
+          <img class="cart-people__img" src="images/slider/slider-img3.jpg" alt="Профильная фотография">
+        </div>
+        <div class="cart-people__content">
+          <div class="cart-people__point">
+            <svg class="cart-people__icon" fill="currentColor" role="img" aria-label="Местоположение" width="11"
+              height="16" viewBox="0 0 11 16" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M5.5 0C2.45929 0 0 2.504 0 5.6C0 9.8 5.5 16 5.5 16C5.5 16 11 9.8 11 5.6C11 2.504 8.54071 0 5.5 0ZM5.5 7.6C4.41571 7.6 3.53571 6.704 3.53571 5.6C3.53571 4.496 4.41571 3.6 5.5 3.6C6.58429 3.6 7.46429 4.496 7.46429 5.6C7.46429 6.704 6.58429 7.6 5.5 7.6Z"
+                />
+            </svg>
+            Исландия
+          </div>
+          <h4 class="cart-people__point-title">
+            Акурейри
+          </h4>
+          <ul class="cart-people__list">
+            <li class="cart-people__item cart-people--data">
+              4 Авг, 2022 - 27 Авг, 2022
+            </li>
+            <li class="cart-people__item cart-people--icon">
+              2 Взрослых <span></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </a>
+    <a class="slider__link" href="#">
+      <div class="cart-people">
+        <div class="cart-people__wrapper-img">
+          <img class="cart-people__img" src="images/slider/slider-img4.jpg" alt="Профильная фотография">
+        </div>
+        <div class="cart-people__content">
+          <div class="cart-people__point">
+            <svg class="cart-people__icon" fill="currentColor" role="img" aria-label="Местоположение" width="11"
+              height="16" viewBox="0 0 11 16" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M5.5 0C2.45929 0 0 2.504 0 5.6C0 9.8 5.5 16 5.5 16C5.5 16 11 9.8 11 5.6C11 2.504 8.54071 0 5.5 0ZM5.5 7.6C4.41571 7.6 3.53571 6.704 3.53571 5.6C3.53571 4.496 4.41571 3.6 5.5 3.6C6.58429 3.6 7.46429 4.496 7.46429 5.6C7.46429 6.704 6.58429 7.6 5.5 7.6Z"
+                />
+            </svg>
+            Флорида
+          </div>
+          <h4 class="cart-people__point-title">
+            Порт-Шарлотт
+          </h4>
+          <ul class="cart-people__list">
+            <li class="cart-people__item cart-people--data">
+              29 Июн, 2022 - 9 Июл, 2022
+            </li>
+            <li class="cart-people__item cart-people--icon">
+              2 Взрослых <span></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </a>
+    <a class="slider__link" href="#">
+      <div class="cart-people">
+        <div class="cart-people__wrapper-img">
+          <img class="cart-people__img" src="images/slider/slider-img5.jpg" alt="Профильная фотография">
+        </div>
+        <div class="cart-people__content">
+          <div class="cart-people__point">
+            <svg class="cart-people__icon" fill="currentColor" role="img" aria-label="Местоположение" width="11"
+              height="16" viewBox="0 0 11 16" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M5.5 0C2.45929 0 0 2.504 0 5.6C0 9.8 5.5 16 5.5 16C5.5 16 11 9.8 11 5.6C11 2.504 8.54071 0 5.5 0ZM5.5 7.6C4.41571 7.6 3.53571 6.704 3.53571 5.6C3.53571 4.496 4.41571 3.6 5.5 3.6C6.58429 3.6 7.46429 4.496 7.46429 5.6C7.46429 6.704 6.58429 7.6 5.5 7.6Z"
+                />
+            </svg>
+            Беларусь
+          </div>
+          <h4 class="cart-people__point-title">
+            Сосны
+          </h4>
+          <ul class="cart-people__list">
+            <li class="cart-people__item cart-people--data">
+              20 Авг, 2022 - 2 Сен, 2022
+            </li>
+            <li class="cart-people__item cart-people--icon">
+              2 Взрослых <span></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </a>
+    <a class="slider__link slider__link--last" href="#">
+      <div class="cart-people">
+        <div class="cart-people__wrapper-img">
+          <img class="cart-people__img" src="images/slider/slider-img8.jpg" alt="Профильная фотография">
+        </div>
+        <div class="cart-people__content">
+          <div class="cart-people__point">
+            <svg class="cart-people__icon" fill="currentColor" role="img" aria-label="Местоположение" width="11"
+              height="16" viewBox="0 0 11 16" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M5.5 0C2.45929 0 0 2.504 0 5.6C0 9.8 5.5 16 5.5 16C5.5 16 11 9.8 11 5.6C11 2.504 8.54071 0 5.5 0ZM5.5 7.6C4.41571 7.6 3.53571 6.704 3.53571 5.6C3.53571 4.496 4.41571 3.6 5.5 3.6C6.58429 3.6 7.46429 4.496 7.46429 5.6C7.46429 6.704 6.58429 7.6 5.5 7.6Z"
+                />
+            </svg>
+            Флорида
+          </div>
+          <h4 class="cart-people__point-title">
+            Нейплс
+          </h4>
+          <ul class="cart-people__list">
+            <li class="cart-people__item cart-people--data">
+              30 Июл, 2022 - 2 Авг, 2022
+            </li>
+            <li class="cart-people__item cart-people--icon">
+              2 Взрослых <span></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+    <div class="find">
+  <div class="container">
+    <div class="find__items">
+      <div class="find-item">
+        <div class="find-item__img-wrapper find-item__img-wrapper--first">
+          <img class="find-item__img" src="images/find/img1.jpg" alt=" Место встречи попутчиков">
+        </div>
+        <div class="find-item__wrapper">
+          <h4 class="find-item__title">
+            Найдите попутчика для общения
+          </h4>
+          <p class="find-item__text">
+            «Когда вы находитесь в пути в течение длительного времени или всей семьёй , или быть может вы одинокий кочевник, вам может быть трудно найти единомышленников, с которыми можно связаться. <span class="find-item__space" >
+            <span class="find-item__span">NOMD</span> поможет вам их найти.</span>
+          </p>
+          <a class="find-item__link" href="#">
+            Исследовать поездку</a>
+        </div>
+      </div>
+      <div class="find-item">
+        <div class="find-item__wrapper find-item__wrapper--second">
+          <h4 class="find-item__title">
+            Поиск, знакомства & общение
+          </h4>
+          <p class="find-item__text">
+            Используйте инструменты поиска здесь, чтобы найти других семей или людей, таких как вы, путешественников, с
+            которыми можно встретиться в дороге, и не забудьте зарегистрировать свои поездки, чтобы они тоже могли найти
+            вас! "
+          </p>
+          <a class="find-item__link find-item__link--second" href="#">Создать свою поездку</a>
+        </div>
+        <div class="find-item__img-wrapper find-item__img-wrapper--second">
+          <img class="find-item__img find-item__img--second" src="images/find/img2.jpg" alt="Новые знакомства">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </main>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="footer-item">
+      <div class="footer-item__inner" style="background-image: url(images/footer.jpg);">
+        <div class="footer-item__info">
+          <h5 class="footer-item__title">
+            Ищи, путешествуй и знакомся с людьми
+          </h5>
+          <p class="footer-item__text">
+            Загрузите наше приложение для Android или iOS
+          </p>
+        </div>
+        <div class="footer-item__download">
+          <div class="footer-item__apple">
+            <a class="footer-item__link" href="#">
+              <svg class="footer-item__icon-apple" role="img" aria-label="Установка приложения для айфонов" width="29" height="34" viewBox="0 0 29 34" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.8926 18.3009C23.8926 15.4467 25.5396 13.0518 27.6636 11.9078C27.5916 11.798 27.6066 11.8269 27.5316 11.7229C26.1456 9.87401 23.2686 8.41223 20.8116 8.41223C18.0216 8.41223 16.4166 9.9809 14.5386 9.9809C12.3846 9.9809 12.0186 8.56823 8.49058 8.56534C7.08358 8.55956 4.87258 9.24712 3.33358 10.6945C0.270581 13.5689 -0.662419 17.7925 0.456581 22.2356C1.38058 25.9131 3.89458 31.922 8.01958 33.7767C10.0296 34.6809 12.0126 32.5489 14.8176 32.5489C17.5386 32.5489 18.9246 34.1176 21.1926 33.8402C24.0636 33.4907 26.2926 29.8016 27.9876 26.4273C28.2666 25.8727 28.5276 24.876 28.5486 24.8298C25.8816 24.1422 23.8926 21.4787 23.8926 18.3009Z" fill=""/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.2495 8.19983C14.2765 8.27183 15.0655 8.38883 16.0915 8.05283C17.0815 7.72883 18.2815 6.97283 19.2535 6.07583C21.3415 4.14983 21.3715 0.147827 21.1465 0.147827C19.6705 0.147827 18.0055 0.954827 16.5595 2.32583C14.6845 4.09883 13.7125 6.80183 14.2495 8.19983Z" fill=""/>
+                </svg>
+              Установить <span>на iTunes</span>
+            </a>
+          </div>
+          <div class="footer-item__android">
+            <a class="footer-item__link" href="#">
+              <svg class="footer-item__icon-android" role="img" aria-label="Установка приложения для андройдов" width="24" height="28" viewBox="0 0 24 28" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.7576 6.7589C15.1948 6.7589 14.7364 6.2981 14.7364 5.7269C14.7364 5.1581 15.1948 4.6973 15.7576 4.6973C16.3205 4.6973 16.7789 5.1581 16.7789 5.7269C16.7789 6.2981 16.3205 6.7589 15.7576 6.7589ZM9.58264 6.7589C9.01976 6.7589 8.56139 6.2981 8.56139 5.7269C8.56139 5.1581 9.01976 4.6973 9.58264 4.6973C10.1455 4.6973 10.6039 5.1581 10.6039 5.7269C10.6039 6.2981 10.1455 6.7589 9.58264 6.7589ZM15.9144 2.8277L17.2824 0.545301C17.3109 0.494901 17.2966 0.432501 17.2468 0.403701L17.0948 0.310101C17.0473 0.281301 16.9831 0.295701 16.9546 0.343701L15.5629 2.6645C14.5654 2.2349 13.4563 1.9973 12.3044 1.9973C11.181 1.9973 10.0909 2.2229 9.10764 2.6429L7.69926 0.271701C7.67076 0.226101 7.60664 0.209301 7.55914 0.238101L7.40714 0.331701C7.35726 0.360501 7.34301 0.425301 7.37151 0.473301L8.75851 2.8013C6.41914 3.9293 4.74951 6.1565 4.74951 8.9261L19.8236 8.8925C19.8236 6.1493 18.2039 3.9557 15.9144 2.8277Z" fill=""/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.67951 9.87524C0.752012 9.87524 -0.000488281 10.5976 -0.000488281 11.4856V18.8344C-0.000488281 19.7272 0.752012 20.4496 1.67951 20.4496C2.60701 20.4496 3.35701 19.7272 3.35701 18.8344V11.4856C3.35701 10.5976 2.60701 9.87524 1.67951 9.87524Z" fill=""/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M21.8982 9.87524C20.9707 9.87524 20.2207 10.5976 20.2207 11.4856V18.8344C20.2207 19.7272 20.9707 20.4496 21.8982 20.4496C22.8282 20.4496 23.5782 19.7272 23.5782 18.8344V11.4856C23.5782 10.5976 22.8282 9.87524 21.8982 9.87524Z" fill="9"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.75 21.536C4.75 22.676 5.52425 22.676 5.8045 22.676H7.71875C7.714 22.7211 7.71163 22.7686 7.71163 22.8113V26.3857C7.71163 27.2763 8.43362 28.0007 9.32662 28.0007C10.2196 28.0007 10.9416 27.2763 10.9416 26.3857V22.8113C10.9416 22.7686 10.9416 22.7211 10.9369 22.676H13.6372C13.6325 22.7211 13.6301 22.7686 13.6301 22.8113V26.3857C13.6301 27.2763 14.3545 28.0007 15.2451 28.0007C16.1381 28.0007 16.8649 27.2763 16.8649 26.3857V22.8113C16.8649 22.7686 16.8601 22.7211 16.8577 22.676H18.7435C19.0237 22.676 19.8241 22.676 19.8241 21.5146V10.1217H4.75V21.536Z" fill=""/>
+                </svg>
+              Установить <span>на Android</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        Copyright 2021 Все права защищены
+      </div>
+    </div>
+</footer>
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+  <script src="js/main.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="js//bootstrap-datepicker.ru.min.js"></script>
+
+  <script>
+    function initMap() {
+      var info
+      var opt = {
+        center: { lat: 57.521060, lng: 7.885154 },
+        zoom: 4,
+      }
+
+      if (document.documentElement.clientWidth < 660) {
+        var opt = {
+          center: { lat: 57.521060, lng: 7.885154 },
+          zoom: 3,
+        }
+      } else {
+        var opt = {
+          center: { lat: 57.521060, lng: 7.885154 },
+          zoom: 4,
+        }
+      };
+
+
+      var map = new google.maps.Map(document.getElementById("map"), opt);
+
+
+      // var marker = new google.maps.Marker({
+      //   position: pos,
+      //   map: map,
+      //   icon: {
+      //     url: "images/icons/man.svg",
+      //     scaledSize: new google.maps.Size(23, 23),
+
+      //   }
+      // });
+
+      var markers = [
+        {
+          coordinates: { lat: 52.67274972628684, lng: 28.266995 },
+          icon: {
+            url: "images/icons/cart-people.svg",
+            scaledSize: new google.maps.Size(21, 21),
+          },
+          info: `<div class="cart-people">
+            <div class="map-cart__wrapper">
+            <a class="map-cart__link" href="#"></a>
+              <img class="map-cart__img" src="images/slider/slider-img5.jpg" alt="image peeple">
+            <div class="map-cart__content">
+              <div class="map-cart__point">
+                <svg class="map-cart__place" fill="currentColor" role="img" aria-label="Icon place" width="11"
+              height="16" viewBox="0 0 11 16" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M5.5 0C2.45929 0 0 2.504 0 5.6C0 9.8 5.5 16 5.5 16C5.5 16 11 9.8 11 5.6C11 2.504 8.54071 0 5.5 0ZM5.5 7.6C4.41571 7.6 3.53571 6.704 3.53571 5.6C3.53571 4.496 4.41571 3.6 5.5 3.6C6.58429 3.6 7.46429 4.496 7.46429 5.6C7.46429 6.704 6.58429 7.6 5.5 7.6Z"
+                />
+              </svg>
+              Беларусь
+            </div>
+            <div class="map-cart__title">Сосны</div>
+              <ul class="map-cart__list">
+                <li class="map-cart__item map-cart--date">20 Авг, 2022 - 2 Сен, 2022</li>
+                <li class="map-cart__item map-cart--man">2 Взрослых <span></span></li>
+              </ul>
+            </div>
+          </div>
+        </div>`
+        },
+
+        {
+          coordinates: { lat: 44.66455494866722, lng: 20.917275567085433 },
+          icon: {
+            url: "images/icons/cart-people.svg",
+            scaledSize: new google.maps.Size(21, 21),
+          },
+          info: `<div class="cart-people">
+            <div class="map-cart__wrapper">
+              <a class="map-cart__link" href="#"></a>
+              <img class="map-cart__img" src="images/slider/slider-img2.jpg" alt="image peeple">
+              <div class="map-cart__content">
+              <div class="map-cart__point">
+                <svg class="map-cart__place" fill="currentColor" role="img" aria-label="Icon place" width="11"
+                height="16" viewBox="0 0 11 16" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M5.5 0C2.45929 0 0 2.504 0 5.6C0 9.8 5.5 16 5.5 16C5.5 16 11 9.8 11 5.6C11 2.504 8.54071 0 5.5 0ZM5.5 7.6C4.41571 7.6 3.53571 6.704 3.53571 5.6C3.53571 4.496 4.41571 3.6 5.5 3.6C6.58429 3.6 7.46429 4.496 7.46429 5.6C7.46429 6.704 6.58429 7.6 5.5 7.6Z"
+                  />
+                </svg>
+              Сербия
+            </div>
+            <div class="map-cart__title">Смедерево</div>
+              <ul class="map-cart__list">
+                <li class="map-cart__item map-cart--date">17 Июл, 2022 - 8 Авг, 2022</li>
+                <li class="map-cart__item map-cart--man">2 Взрослых <span>/</span> 2 Ребёнка</li>
+              </ul>
+            </div>
+          </div>
+        </div>`
+        },
+
+        {
+          coordinates: { lat: 65.69014987144709, lng: -18.11074927324128 },
+          icon: {
+            url: "images/icons/cart-people.svg",
+            scaledSize: new google.maps.Size(21, 21),
+          },
+          info: `<div class="cart-people">
+            <div class="map-cart__wrapper">
+              <a class="map-cart__link" href="#"></a>
+              <img class="map-cart__img" src="images/slider/slider-img3.jpg" alt="image peeple">
+              <div class="map-cart__content">
+                <div class="map-cart__point">
+                <svg class="map-cart__place" fill="currentColor" role="img" aria-label="Icon place" width="11"
+                height="16" viewBox="0 0 11 16" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M5.5 0C2.45929 0 0 2.504 0 5.6C0 9.8 5.5 16 5.5 16C5.5 16 11 9.8 11 5.6C11 2.504 8.54071 0 5.5 0ZM5.5 7.6C4.41571 7.6 3.53571 6.704 3.53571 5.6C3.53571 4.496 4.41571 3.6 5.5 3.6C6.58429 3.6 7.46429 4.496 7.46429 5.6C7.46429 6.704 6.58429 7.6 5.5 7.6Z"
+                  />
+                </svg>
+                Исландия
+              </div> 
+              <div class="map-cart__title">Акурейри</div>
+              <ul class="map-cart__list"> 
+                <li class="map-cart__item map-cart--date">4 Авг, 2022- 27 Авг, 2022</li>
+                <li class="map-cart__item map-cart--man">2 Взрослых <span></span></li>
+              </ul> 
+            </div>
+          </div> 
+        </div>`
+        },
+
+      ];
+
+      for (var i = 0; i < markers.length; i++) {
+        addMarker(markers[i]);
+      }
+
+      function addMarker(prorerties) {
+        var marker = new google.maps.Marker({
+          position: prorerties.coordinates,
+          map: map,
+          icon: prorerties.icon,
+        });
+
+        if (prorerties.info) {
+          var info = new google.maps.InfoWindow({
+            content: prorerties.info
+          });
+
+          marker.addListener("click", function () {
+            info.open(map, marker);
+          });
+        }
+
+
+        // marker.setIcon(icon);
+
+        // var icon = { url: '/images/icons/man.svg', size: new google.maps.Size(23, 23) };
+        // marker.setIcon(icon);
+
+      }
+
+      // var info = new google.maps.InfoWindow({
+      //   content: '<a href="#">' +
+      //     '<div class="map-cart__img-wrapper">' +
+      //     '<img class="map-cart__img" src="images/slider/slider-img1.jpg" alt="image peeple">' +
+      //     '<img class="map-cart__mini-map" src="images//under-header/mini-map.jpg" alt="image' + 'mini-map">' +
+      //     '</div>' +
+      //     '<div class="map-cart__content">' +
+      //     '<div class="map-cart__point">' +
+      //     '<svg class="map-cart__place">' +
+      //     '<use xlink:href="images/sprite.svg#place"></use>' +
+      //     '</svg>' +
+      //     'Halifax' +
+      //     '</div>' +
+      //     '<div class="map-cart__title">Sofia Manzano</div>' +
+      //     '<ul class="map-cart__list">' +
+      //     '<li class="map-cart__item map-cart--date">2 Aug, 2019 - 10 Aug, 2019</li>' +
+      //     '<li class="map-cart__item map-cart--man">2 Adults <span>3 Kids</span></li>' +
+      //     '</ul>' +
+      //     '</div>' +
+      //     '</a>'
+      // });
+
+      // marker.addListener("click", function () {
+      //   info.open(map, marker);
+      // });
+
+    }
+  </script>
+
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADgyfx7NqADenKcEWVFvXsKPLHdIFyN4k&callback=initMap">
+    </script>
+</body>
+
+</html>
