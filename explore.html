@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/explore.min.css">
+</head>
+
+<body>
+  
+  <header class="header">
+  <div class="container">
+    <div class="header__mobile-wrapper">
+      <a href="#">
+        <img class="logo" src="images/logo.png" alt="Логотип Nomad">
+      </a>
+      <div class="header__inner">
+        <div class="header__wrapper">
+          <!-- <button class="header__button">
+            <svg class="header__search">
+              <use xlink:href="images/sprite.svg#search"></use>
+            </svg> 
+          </button> -->
+          <form class="header__form-search" action="#">
+            <input class="header__input-search" type="text" required minlength="3" name="header__input-result">
+            <button class="header__button" type="submit">
+              <svg class="header__search" role="img" aria-label="Поиск" width="20" height="20" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M14.2939 12.5786H13.3905L13.0703 12.2699C14.191 10.9663 14.8656 9.27387 14.8656 7.43282C14.8656 3.32762 11.538 0 7.43282 0C3.32762 0 0 3.32762 0 7.43282C0 11.538 3.32762 14.8656 7.43282 14.8656C9.27387 14.8656 10.9663 14.191 12.2699 13.0703L12.5786 13.3905V14.2939L18.2962 20L20 18.2962L14.2939 12.5786ZM7.43282 12.5786C4.58548 12.5786 2.28702 10.2802 2.28702 7.43282C2.28702 4.58548 4.58548 2.28702 7.43282 2.28702C10.2802 2.28702 12.5786 4.58548 12.5786 7.43282C12.5786 10.2802 10.2802 12.5786 7.43282 12.5786Z"
+                  fill="" />
+              </svg>
+            </button>
+          </form>
+          <a class="header__link" href="#">
+            <svg class="header__chat" role="img" aria-label="Сообщения" width="22" height="22" viewBox="0 0 22 22"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M19.8 0H2.2C0.99 0 0.011 0.99 0.011 2.2L0 22L4.4 17.6H19.8C21.01 17.6 22 16.61 22 15.4V2.2C22 0.99 21.01 0 19.8 0ZM17.6 13.2H4.4V11H17.6V13.2ZM17.6 9.9H4.4V7.7H17.6V9.9ZM17.6 6.6H4.4V4.4H17.6V6.6Z"
+                fill="" />
+            </svg>
+            <div class="header__chat-num">6</div>
+          </a>
+          <a class="header__link" href="#">
+            <svg class="header__alert" role="img" aria-label="Уведомления" width="20" height="24" viewBox="0 0 20 24"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M17.5 16.6154V10.4615C17.5 6.68308 15.45 3.52 11.875 2.68308V1.84615C11.875 0.824615 11.0375 0 10 0C8.9625 0 8.125 0.824615 8.125 1.84615V2.68308C4.5375 3.52 2.5 6.67077 2.5 10.4615V16.6154L0 19.0769V20.3077H20V19.0769L17.5 16.6154ZM11.25 16.6154H8.75V14.1538H11.25V16.6154ZM11.25 11.6923H8.75V6.76923H11.25V11.6923ZM10 24C11.375 24 12.5 22.8923 12.5 21.5385H7.5C7.5 22.8923 8.6125 24 10 24Z"
+                fill="" />
+            </svg>
+            <div class="header__alert-num">9</div>
+          </a>
+          <a class="header__create-link" href="#">
+            <svg class="header__plus" role="img" aria-label="Новая поездка" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
+              <path fill-rule="evenodd"
+                d="M 11 2 L 11 11 L 2 11 L 2 13 L 11 13 L 11 22 L 13 22 L 13 13 L 22 13 L 22 11 L 13 11 L 13 2 Z" />
+            </svg>
+            Новая поездка
+          </a>
+        </div>
+        <button class="header__link-profile" type="menu">
+          <img class="header__link-img" src="images/group-chat/img27.jpg" alt="Профиль">
+        </button>
+      </div>
+
+
+
+      <!-- Хедер меню -->
+      <div class="head">
+        <nav class="nav" data-nav>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link-profile">
+                Профиль
+                <svg class="nav__profile nav-icon" role="img" aria-label="Перейти в профиль" width="13" height="13"
+                  viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M6.5 0C2.912 0 0 2.912 0 6.5C0 10.088 2.912 13 6.5 13C10.088 13 13 10.088 13 6.5C13 2.912 10.088 0 6.5 0ZM6.5 1.95C7.579 1.95 8.45 2.821 8.45 3.9C8.45 4.979 7.579 5.85 6.5 5.85C5.421 5.85 4.55 4.979 4.55 3.9C4.55 2.821 5.421 1.95 6.5 1.95ZM6.5 11.18C4.875 11.18 3.4385 10.348 2.6 9.087C2.6195 7.7935 5.2 7.085 6.5 7.085C7.7935 7.085 10.3805 7.7935 10.4 9.087C9.5615 10.348 8.125 11.18 6.5 11.18Z"
+                    fill="currentColor" />
+                </svg>
+              </a>
+            </li>
+            <li class="nav__item nav__link-search">
+              <a href="#" class="nav__link">
+                Поиск
+                <svg class="nav__search nav-icon" role="img" aria-label="Поиск" width="20" height="20"
+                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M14.2939 12.5786H13.3905L13.0703 12.2699C14.191 10.9663 14.8656 9.27387 14.8656 7.43282C14.8656 3.32762 11.538 0 7.43282 0C3.32762 0 0 3.32762 0 7.43282C0 11.538 3.32762 14.8656 7.43282 14.8656C9.27387 14.8656 10.9663 14.191 12.2699 13.0703L12.5786 13.3905V14.2939L18.2962 20L20 18.2962L14.2939 12.5786ZM7.43282 12.5786C4.58548 12.5786 2.28702 10.2802 2.28702 7.43282C2.28702 4.58548 4.58548 2.28702 7.43282 2.28702C10.2802 2.28702 12.5786 4.58548 12.5786 7.43282C12.5786 10.2802 10.2802 12.5786 7.43282 12.5786Z"
+                    fill="" />
+                </svg>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link-message">
+                Сообщения
+                <svg class="nav__message nav-icon" role="img" aria-label="Сообщения" xmlns="http://www.w3.org/2000/svg"
+                  width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                  <path
+                    d="M24.581 12.331v-2.165l-8.581 5.373-8.581-5.373v2.165l8.581 5.293 8.581-5.293zM24.581 8c1.123 0 2.085 0.962 2.085 2.165v12.832c0 1.123-0.962 2.165-2.085 2.165h-17.163c-1.123 0-2.085-0.962-2.085-2.165v-12.832c0-1.123 0.962-2.165 2.085-2.165 0 0 17.163 0 17.163 0z">
+                  </path>
+                </svg>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link-alert">
+                Уведомления
+                <svg class="nav__alert nav-icon" role="img" aria-label="Уведомления" width="20" height="24"
+                  viewBox="0 0 20 24" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M17.5 16.6154V10.4615C17.5 6.68308 15.45 3.52 11.875 2.68308V1.84615C11.875 0.824615 11.0375 0 10 0C8.9625 0 8.125 0.824615 8.125 1.84615V2.68308C4.5375 3.52 2.5 6.67077 2.5 10.4615V16.6154L0 19.0769V20.3077H20V19.0769L17.5 16.6154ZM11.25 16.6154H8.75V14.1538H11.25V16.6154ZM11.25 11.6923H8.75V6.76923H11.25V11.6923ZM10 24C11.375 24 12.5 22.8923 12.5 21.5385H7.5C7.5 22.8923 8.6125 24 10 24Z"
+                    fill="currentColor" />
+                </svg>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link-settings">
+                Настройки
+                <svg class="nav__settings nav-icon" role="img" aria-label="Настройки" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="507.451px" height="507.45px"
+                  viewBox="0 0 507.451 507.45" style="enable-background:new 0 0 507.451 507.45;" xml:space="preserve">
+                  <g>
+                    <g id="settings">
+                      <path d="M440.813,280.5c0-7.65,2.55-15.3,2.55-25.5s0-17.85-2.55-25.5l53.55-43.35c5.1-5.1,5.1-10.2,2.55-15.3l-51-89.25
+			c-2.55-2.55-7.649-5.1-15.3-2.55l-63.75,25.5c-12.75-10.2-28.05-17.85-43.35-25.5l-10.2-66.3C315.863,5.1,308.212,0,303.113,0
+			h-102c-5.101,0-12.75,5.1-12.75,10.2l-10.2,68.85c-15.3,5.1-28.05,15.3-43.35,25.5l-61.2-25.5c-7.65-2.55-12.75,0-17.851,5.1
+			l-51,89.25c-2.55,2.55,0,10.2,5.1,15.3l53.55,40.8c0,7.65-2.55,15.3-2.55,25.5s0,17.85,2.55,25.5l-53.55,43.35
+			c-5.1,5.101-5.1,10.2-2.55,15.301l51,89.25c2.55,2.55,7.649,5.1,15.3,2.55l63.75-25.5c12.75,10.2,28.05,17.85,43.35,25.5
+			l10.2,66.3c0,5.1,5.1,10.2,12.75,10.2h102c5.101,0,12.75-5.101,12.75-10.2l10.2-66.3c15.3-7.65,30.6-15.3,43.35-25.5l63.75,25.5
+			c5.101,2.55,12.75,0,15.301-5.101l51-89.25c2.55-5.1,2.55-12.75-2.551-15.3L440.813,280.5z M252.113,344.25
+			c-48.45,0-89.25-40.8-89.25-89.25s40.8-89.25,89.25-89.25s89.25,40.8,89.25,89.25S300.563,344.25,252.113,344.25z" />
+                    </g>
+                </svg>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link-newtravel">
+                Помощь
+                <svg class="nav__newtravel nav-icon" role="img" aria-label="Помощь" fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
+                  <path fill-rule="evenodd"
+                    d="M 11 2 L 11 11 L 2 11 L 2 13 L 11 13 L 11 22 L 13 22 L 13 13 L 22 13 L 22 11 L 13 11 L 13 2 Z" />
+                </svg>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link-mytravel">
+                Мои поездки
+                <svg class="nav__mytravel nav-icon" role="img" aria-label="Мои поездки" width="21" height="18"
+                  viewBox="0 0 21 18" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0 11H5V6H0V11ZM0 18H5V13H0V18ZM0 5H5V0H0V5ZM6 11H21V6H6V11ZM6 18H21V13H6V18ZM6 0V5H21V0H6Z"
+                    fill="currentColor" />
+                </svg>
+              </a>
+            </li>
+            <li class="nav__item nav-hidden">
+              <a href="#" class="nav__link nav__link-mytravel">
+                Подписчики
+                <svg class="nav__mytravel nav-icon" role="img" aria-label="Подписчики" viewBox="0 0 640 512"
+                  xmlns="http://www.w3.org/2000/svg" >
+                  <path
+                    d="M192 256c61.9 0 112-50.1 112-112S253.9 32 192 32 80 82.1 80 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C51.6 288 0 339.6 0 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zM480 256c53 0 96-43 96-96s-43-96-96-96-96 43-96 96 43 96 96 96zm48 32h-3.8c-13.9 4.8-28.6 8-44.2 8s-30.3-3.2-44.2-8H432c-20.4 0-39.2 5.9-55.7 15.4 24.4 26.3 39.7 61.2 39.7 99.8v38.4c0 2.2-.5 4.3-.6 6.4H592c26.5 0 48-21.5 48-48 0-61.9-50.1-112-112-112z" fill="currentColor"/>
+                </svg>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link-newtravel">
+                Новая поездка
+                <svg class="nav__newtravel nav-icon" role="img" aria-label=" Новая поездка"
+                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  width="510px" height="510px" viewBox="0 0 510 510" style="enable-background:new 0 0 510 510;"
+                  xml:space="preserve">
+                  <g id="flights">
+                    <path d="M510,255c0-20.4-17.85-38.25-38.25-38.25H331.5L204,12.75h-51l63.75,204H76.5l-38.25-51H0L25.5,255L0,344.25h38.25
+			                  l38.25-51h140.25l-63.75,204h51l127.5-204h140.25C492.15,293.25,510,275.4,510,255z" fill="currentColor"/>
+                  </g>
+                </svg>
+              </a>
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link-newtravel">
+                Выйти
+                <svg class="nav__newtravel nav-icon"  role="img" aria-label="Выход" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M11.992 8.994V6.996H7.995v-2h3.997V2.999l3.998 2.998-3.998 2.998zm-1.998 2.998H5.996V2.998L2 1h7.995v2.998h1V1c0-.55-.45-.999-1-.999H.999A1.001 1.001 0 0 0 0 1v11.372c0 .39.22.73.55.91L5.996 16v-3.008h3.998c.55 0 1-.45 1-1V7.996h-1v3.998z" fill="currentColor"/>
+                </svg>
+              </a>
+            </li>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="burger header__burger" data-burger aria-label="Открыть меню" aria-expanded="false">
+          <img class="header__link-img header__img" src="images/group-chat/img27.jpg" alt="Профиль">
+        </button>
+      </div>
+
+
+    </div>
+    <div class="overlay"></div>
+  </div>
+</header>
+  <main class="main">
+  <div class="explore-search">
+  <div class="container">
+    <div class="explore-search__inner">
+      <h2 class="explore-search__title">
+        Поиск групп
+      </h2>
+      <form class="explore-search__wrapper-input" action="#">
+        <input class="explore-search__input" type="text" placeholder="Поиск групп" name="explore__input" required
+          minlength="3">
+        <button class="explore-search__btn">
+          Поиск
+          <svg class="explore-search__search" role="img" aria-label="Поиск" width="20" height="20" viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M14.2939 12.5786H13.3905L13.0703 12.2699C14.191 10.9663 14.8656 9.27387 14.8656 7.43282C14.8656 3.32762 11.538 0 7.43282 0C3.32762 0 0 3.32762 0 7.43282C0 11.538 3.32762 14.8656 7.43282 14.8656C9.27387 14.8656 10.9663 14.191 12.2699 13.0703L12.5786 13.3905V14.2939L18.2962 20L20 18.2962L14.2939 12.5786ZM7.43282 12.5786C4.58548 12.5786 2.28702 10.2802 2.28702 7.43282C2.28702 4.58548 4.58548 2.28702 7.43282 2.28702C10.2802 2.28702 12.5786 4.58548 12.5786 7.43282C12.5786 10.2802 10.2802 12.5786 7.43282 12.5786Z"
+            fill="" />
+        </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="explore-cart__wrapper-cart">
+    <div class="explore-cart__wrapper">
+      <a class="explore-cart__link" href="#">
+        <article class="explore-cart">
+          <img class="explore-cart__img" src="images/explore/img1.jpg" alt="Фотография группы 'Австралия'">
+          <div class="explore-cart__inner">
+            <h3 class="explore-cart__title">
+              Австралия
+            </h3>
+            <p class="explore-cart__text">
+              Австралия – страна, полная сюрпризов, редких красот и нигде больше не встречающихся чудес. Расположенная
+              на другом конце света – в Южном полушарии, она привлекает все больше туристов из северной половины земного
+              шара. Растет число туристов, отправляющихся на континент из России. Если вы планируете туристическое
+              путешествие в Австралию, то смело включайте фантазию: Зеленый континент предлагает огромное количество
+              развлечений, разнообразнейший отдых и приключения на все вкусы и возможности.
+            </p>
+            <div class="images-followers">
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img18.jpg"
+                  alt="Фотография пользователя №18">
+              </a>
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img19.jpg"
+                  alt="Фотография пользователя №19">
+              </a>
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img17.jpg"
+                  alt="Фотография пользователя №17">
+              </a>
+              <span class="explore-cart__info-text">
+                159 Подписчиков
+              </span>
+            </div>
+            <button class="explore-cart__btn"
+              onclick="this.className = (this.className == 'explore-cart__btn' ? 'explore-cart__btn-change' : 'explore-cart__btn')"
+              type="button">
+              <svg class="explore-cart__plus" role="img" aria-label="Подписаться на группу" width="16" height="16"
+                viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.416 0 8 0ZM12 8.8H8.8V12H7.2V8.8H4V7.2H7.2V4H8.8V7.2H12V8.8Z"
+                  fill="" />
+              </svg>
+              <svg class="explore-cart__agree" role="img" aria-label="Отписаться от группы" width="16" height="16"
+                viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0 8C0 3.584 3.584 0 8 0C12.416 0 16 3.584 16 8C16 12.416 12.416 16 8 16C3.584 16 0 12.416 0 8ZM2.4 8L6.4 12L13.6 4.8L12.472 3.664L6.4 9.736L3.528 6.872L2.4 8Z"
+                  fill="white" />
+              </svg>
+              <span class="explore-cart__start">Подписаться на группу</span> <span
+                class="explore-cart__hidden">Подписанны</span>
+            </button>
+          </div>
+        </article>
+      </a>
+    </div>
+    <div class="explore-cart__wrapper">
+      <a class="explore-cart__link" href="#">
+        <article class="explore-cart">
+          <img class="explore-cart__img" src="images/explore/img2.jpg" alt="Фотография группы 'Таиланд'">
+          <div class="explore-cart__inner">
+            <h3 class="explore-cart__title">
+              Таиланд
+            </h3>
+            <p class="explore-cart__text">
+              Таиланд — страна жаркого солнца, ласкового моря и невероятного драйва. Просторные чистые пляжи,
+              экзотическая
+              растительность и улыбки местных жителей оставляют у российских туристов отличные воспоминания об отдыхе в
+              Таиланде. На побережье найдётся место и семьям с маленькими детьми, и тусовщикам, и любителям
+              достопримечательностей — курорты в Таиланде есть на любой вкус.
+            </p>
+            <div class="images-followers">
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img20.jpg"
+                  alt="Фотография пользователя №20">
+              </a>
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img21.jpg"
+                  alt="Фотография пользователя №21">
+              </a>
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img22.jpg"
+                  alt="Фотография пользователя №22">
+              </a>
+              <span class="explore-cart__info-text">
+                341 Подписчиков
+              </span>
+            </div>
+            <button class="explore-cart__btn"
+              onclick="this.className = (this.className == 'explore-cart__btn' ? 'explore-cart__btn-change' : 'explore-cart__btn')"
+              type="button">
+              <svg class="explore-cart__plus" role="img" aria-label="Подписаться на группу" width="16" height="16"
+                viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.416 0 8 0ZM12 8.8H8.8V12H7.2V8.8H4V7.2H7.2V4H8.8V7.2H12V8.8Z"
+                  fill="" />
+              </svg>
+              <svg class="explore-cart__agree" role="img" aria-label="Отписаться от группы" width="16" height="16"
+                viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0 8C0 3.584 3.584 0 8 0C12.416 0 16 3.584 16 8C16 12.416 12.416 16 8 16C3.584 16 0 12.416 0 8ZM2.4 8L6.4 12L13.6 4.8L12.472 3.664L6.4 9.736L3.528 6.872L2.4 8Z"
+                  fill="white" />
+              </svg>
+              <span class="explore-cart__start">Подписаться на группу</span> <span
+                class="explore-cart__hidden">Подписанны</span>
+            </button>
+          </div>
+        </article>
+      </a>
+    </div>
+    <div class="explore-cart__wrapper">
+      <a class="explore-cart__link" href="#">
+        <article class="explore-cart">
+          <img class="explore-cart__img" src="images/explore/img3.jpg" alt="Фотография группы 'Египет'">
+          <div class="explore-cart__inner">
+            <h3 class="explore-cart__title">
+              Египет
+            </h3>
+            <p class="explore-cart__text">
+              Достоинства Египта известны каждому: качественный пляжный отдых круглый год на Средиземном и Красном
+              морях,
+              разбавленный отличным дайвингом, плюс разнообразная «экскурсионка»: пирамиды, Сфинкс и Луксор. Все о
+              Египте
+              от Хургады до Шарма: туры, отели, цены, погода.
+            </p>
+            <div class="images-followers">
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img23.jpg"
+                  alt="Фотография пользователя №23">
+              </a>
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img24.jpg"
+                  alt="Фотография пользователя №24">
+              </a>
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img25.jpg"
+                  alt="Фотография пользователя №25">
+              </a>
+              <span class="explore-cart__info-text">
+                422 Подписчиков
+              </span>
+            </div>
+            <button class="explore-cart__btn"
+              onclick="this.className = (this.className == 'explore-cart__btn' ? 'explore-cart__btn-change' : 'explore-cart__btn')"
+              type="button">
+              <svg class="explore-cart__plus" role="img" aria-label="Подписаться на группу" width="16" height="16"
+                viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.416 0 8 0ZM12 8.8H8.8V12H7.2V8.8H4V7.2H7.2V4H8.8V7.2H12V8.8Z"
+                  fill="" />
+              </svg>
+              <svg class="explore-cart__agree" role="img" aria-label="Отписаться от группы" width="16" height="16"
+                viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0 8C0 3.584 3.584 0 8 0C12.416 0 16 3.584 16 8C16 12.416 12.416 16 8 16C3.584 16 0 12.416 0 8ZM2.4 8L6.4 12L13.6 4.8L12.472 3.664L6.4 9.736L3.528 6.872L2.4 8Z"
+                  fill="white" />
+              </svg>
+              <span class="explore-cart__start">Подписаться на группу</span> <span
+                class="explore-cart__hidden">Подписанны</span>
+            </button>
+          </div>
+        </article>
+      </a>
+    </div>
+    <div class="explore-cart__wrapper">
+      <a class="explore-cart__link" href="#">
+        <article class="explore-cart">
+          <img class="explore-cart__img" src="images/explore/img4.jpg" alt="Фотография группы 'Канада'">
+          <div class="explore-cart__inner">
+            <h3 class="explore-cart__title">
+              Канада
+            </h3>
+            <p class="explore-cart__text">
+              Канада — это горнолыжные курорты, туры на обучение английскому и французскому и примечательные
+              национальные
+              парки. Столица с достоинством — Оттава, колоритный Квебек и обрамленный горами Ванкувер, клены и хоккей —
+              все о Канаде: виза и города, карты и фото.
+            </p>
+            <div class="images-followers">
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img26.jpg"
+                  alt="Фотография пользователя №26">
+              </a>
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img27.jpg"
+                  alt="Фотография пользователя №27">
+              </a>
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img28.jpg"
+                  alt="Фотография пользователя №28">
+              </a>
+              <span class="explore-cart__info-text">
+                307 Подписчиков
+              </span>
+            </div>
+            <button class="explore-cart__btn-change"
+              onclick="this.className = (this.className == 'explore-cart__btn' ? 'explore-cart__btn-change' : 'explore-cart__btn')"
+              type="button">
+              <svg class="explore-cart__plus" role="img" aria-label="Подписаться на группу" width="16" height="16"
+                viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.416 0 8 0ZM12 8.8H8.8V12H7.2V8.8H4V7.2H7.2V4H8.8V7.2H12V8.8Z"
+                  fill="" />
+              </svg>
+              <svg class="explore-cart__agree" role="img" aria-label="Отписаться от группы" width="16" height="16"
+                viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0 8C0 3.584 3.584 0 8 0C12.416 0 16 3.584 16 8C16 12.416 12.416 16 8 16C3.584 16 0 12.416 0 8ZM2.4 8L6.4 12L13.6 4.8L12.472 3.664L6.4 9.736L3.528 6.872L2.4 8Z"
+                  fill="white" />
+              </svg>
+              <span class="explore-cart__start">Подписаться на группу</span> <span
+                class="explore-cart__hidden">Подписанны</span>
+            </button>
+          </div>
+        </article>
+      </a>
+    </div>
+    <div class="explore-cart__wrapper">
+      <a class="explore-cart__link" href="#">
+        <article class="explore-cart">
+          <img class="explore-cart__img" src="images/explore/img5.jpg" alt="Фотография группы 'Индонезия'">
+          <div class="explore-cart__inner">
+            <h3 class="explore-cart__title">
+              Индонезия
+            </h3>
+            <p class="explore-cart__text">
+              Индонезия — это невероятная для жителя северного полушария экзотика. Сюда едут, чтобы оказаться в сказке,
+              среди пальм, песка, улыбчивых людей, ярких храмов, сочных фруктов и пьянящего морского бриза. В Индонезию
+              приезжают молодежные компании — снимают виллу и живут несколько месяцев, наслаждаясь климатом и атмосферой
+              острова; здесь любят отдыхать те, кому по душе йога и спа; тут всегда много серферов, потому что ловить
+              волну на Бали можно круглый год.
+            </p>
+            <div class="images-followers">
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img29.jpg"
+                  alt="Фотография пользователя №29">
+              </a>
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img30.jpg"
+                  alt="Фотография пользователя №30">
+              </a>
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img31.jpg"
+                  alt="Фотография пользователя №31">
+              </a>
+              <span class="explore-cart__info-text">
+                203 Подписчиков
+              </span>
+            </div>
+            <button class="explore-cart__btn"
+              onclick="this.className = (this.className == 'explore-cart__btn' ? 'explore-cart__btn-change' : 'explore-cart__btn')"
+              type="button">
+              <svg class="explore-cart__plus" role="img" aria-label="Подписаться на группу" width="16" height="16"
+                viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.416 0 8 0ZM12 8.8H8.8V12H7.2V8.8H4V7.2H7.2V4H8.8V7.2H12V8.8Z"
+                  fill="" />
+              </svg>
+              <svg class="explore-cart__agree" role="img" aria-label="Отписаться от группы" width="16" height="16"
+                viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0 8C0 3.584 3.584 0 8 0C12.416 0 16 3.584 16 8C16 12.416 12.416 16 8 16C3.584 16 0 12.416 0 8ZM2.4 8L6.4 12L13.6 4.8L12.472 3.664L6.4 9.736L3.528 6.872L2.4 8Z"
+                  fill="white" />
+              </svg>
+              <span class="explore-cart__start">Подписаться на группу</span> <span
+                class="explore-cart__hidden">Подписанны</span>
+            </button>
+          </div>
+        </article>
+      </a>
+    </div>
+    <div class="explore-cart__wrapper">
+      <a class="explore-cart__link" href="#">
+        <article class="explore-cart">
+          <img class="explore-cart__img" src="images/explore/img6.jpg" alt="Фотография группы 'Франция'">
+          <div class="explore-cart__inner">
+            <h3 class="explore-cart__title">
+              Франция
+            </h3>
+            <p class="explore-cart__text">
+              Франция – самая посещаемая туристами страна в мире. Ее привлекательность объясняется разнообразием
+              пейзажей,
+              историческим наследием, культурным богатством, виноделием, изысканной кухней, приятным климатом,
+              возможностью заняться разными видами спорта и развитым туристическим сектором.
+            </p>
+            <div class="images-followers">
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img1.jpg"
+                  alt="Фотография пользователя №1">
+              </a>
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img33.jpg"
+                  alt="Фотография пользователя №33">
+              </a>
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img34.jpg"
+                  alt="Фотография пользователя №34">
+              </a>
+              <span class="explore-cart__info-text">
+                656 Подписчиков
+              </span>
+            </div>
+            <button class="explore-cart__btn-change"
+              onclick="this.className = (this.className == 'explore-cart__btn' ? 'explore-cart__btn-change' : 'explore-cart__btn')"
+              type="button">
+              <svg class="explore-cart__plus" role="img" aria-label="Подписаться на группу" width="16" height="16"
+                viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.416 0 8 0ZM12 8.8H8.8V12H7.2V8.8H4V7.2H7.2V4H8.8V7.2H12V8.8Z"
+                  fill="" />
+              </svg>
+              <svg class="explore-cart__agree" role="img" aria-label="Отписаться от группы" width="16" height="16"
+                viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0 8C0 3.584 3.584 0 8 0C12.416 0 16 3.584 16 8C16 12.416 12.416 16 8 16C3.584 16 0 12.416 0 8ZM2.4 8L6.4 12L13.6 4.8L12.472 3.664L6.4 9.736L3.528 6.872L2.4 8Z"
+                  fill="white" />
+              </svg>
+              <span class="explore-cart__start">Подписаться на группу</span> <span
+                class="explore-cart__hidden">Подписанны</span>
+            </button>
+          </div>
+        </article>
+      </a>
+    </div>
+    <div class="explore-cart__wrapper">
+      <a class="explore-cart__link" href="#">
+        <article class="explore-cart">
+          <img class="explore-cart__img" src="images/explore/img7.jpg" alt="Фотография группы 'Тайвань'">
+          <div class="explore-cart__inner">
+            <h3 class="explore-cart__title">
+              Тайвань
+            </h3>
+            <p class="explore-cart__text">
+              Тайвань манит путешественников своей великолепной природой: почти 20 % его территории — национальные парки
+              и
+              заповедники с эндемичными видами животных и растений. На острове много архитектурных
+              достопримечательностей
+              — памятников китайской, японской и европейской культуры. Гурманы едут сюда, чтобы попробовать чай: он тут
+              один из лучших во всем мире. Бизнесмены съезжаются на крупнейшие в Азии выставки и форумы. На Тайване
+              всегда
+              есть, на что посмотреть и чему удивиться.
+            </p>
+            <div class="images-followers">
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img35.jpg"
+                  alt="Фотография пользователя №35">
+              </a>
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img36.jpg"
+                  alt="Фотография пользователя №36">
+              </a>
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img37.jpg"
+                  alt="Фотография пользователя №37">
+              </a>
+              <span class="explore-cart__info-text">
+                232 Подписчиков
+              </span>
+            </div>
+            <button class="explore-cart__btn"
+              onclick="this.className = (this.className == 'explore-cart__btn' ? 'explore-cart__btn-change' : 'explore-cart__btn')"
+              type="button">
+              <svg class="explore-cart__plus" role="img" aria-label="Подписаться на группу" width="16" height="16"
+                viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.416 0 8 0ZM12 8.8H8.8V12H7.2V8.8H4V7.2H7.2V4H8.8V7.2H12V8.8Z"
+                  fill="" />
+              </svg>
+              <svg class="explore-cart__agree" role="img" aria-label="Отписаться от группы" width="16" height="16"
+                viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0 8C0 3.584 3.584 0 8 0C12.416 0 16 3.584 16 8C16 12.416 12.416 16 8 16C3.584 16 0 12.416 0 8ZM2.4 8L6.4 12L13.6 4.8L12.472 3.664L6.4 9.736L3.528 6.872L2.4 8Z"
+                  fill="white" />
+              </svg>
+              <span class="explore-cart__start">Подписаться на группу</span> <span
+                class="explore-cart__hidden">Подписанны</span>
+            </button>
+          </div>
+        </article>
+      </a>
+    </div>
+    <div class="explore-cart__wrapper">
+      <a class="explore-cart__link" href="#">
+        <article class="explore-cart">
+          <img class="explore-cart__img" src="images/explore/img8.jpg" alt="Фотография группы 'Испания'">
+          <div class="explore-cart__inner">
+            <h3 class="explore-cart__title">
+              Испания
+            </h3>
+            <p class="explore-cart__text">
+              Солнечная и жизнерадостная Испания ждет туристов на пляжи Средиземного моря, горнолыжные курорты и зимний
+              отдых на Тенерифе. Развлечения и достопримечательности от Мадрида до Канар, от Дали до Гауди, от Реала до
+              Барсы — все об Испании: туры, цены, отели, карты и фото.
+            </p>
+            <div class="images-followers">
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img38.jpg"
+                  alt="Фотография пользователя №38">
+              </a>
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img39.jpg"
+                  alt="Фотография пользователя №39">
+              </a>
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img40.jpg"
+                  alt="Фотография пользователя №40">
+              </a>
+              <span class="explore-cart__info-text">
+                384 Подписчиков
+              </span>
+            </div>
+            <button class="explore-cart__btn"
+              onclick="this.className = (this.className == 'explore-cart__btn' ? 'explore-cart__btn-change' : 'explore-cart__btn')"
+              type="button">
+              <svg class="explore-cart__plus" role="img" aria-label="Подписаться на группу" width="16" height="16"
+                viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.416 0 8 0ZM12 8.8H8.8V12H7.2V8.8H4V7.2H7.2V4H8.8V7.2H12V8.8Z"
+                  fill="" />
+              </svg>
+              <svg class="explore-cart__agree" role="img" aria-label="Отписаться от группы" width="16" height="16"
+                viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0 8C0 3.584 3.584 0 8 0C12.416 0 16 3.584 16 8C16 12.416 12.416 16 8 16C3.584 16 0 12.416 0 8ZM2.4 8L6.4 12L13.6 4.8L12.472 3.664L6.4 9.736L3.528 6.872L2.4 8Z"
+                  fill="white" />
+              </svg>
+              <span class="explore-cart__start">Подписаться на группу</span> <span
+                class="explore-cart__hidden">Подписанны</span>
+            </button>
+          </div>
+        </article>
+      </a>
+    </div>
+    <div class="explore-cart__wrapper">
+      <a class="explore-cart__link" href="#">
+        <article class="explore-cart">
+          <img class="explore-cart__img" src="images/explore/img9.jpg" alt="Фотография группы 'Алтай'">
+          <div class="explore-cart__inner">
+            <h3 class="explore-cart__title">
+              Алтай
+            </h3>
+            <p class="explore-cart__text">
+              Алтай — это страна контрастов. Здесь множество уникальных и совершенно непохожих друг на друга
+              природно-климатических комплексов. Тут находятся самая высокая вершина Сибири — гора Белуха (4506 м) и
+              первая по глубине пещера России — Экологическая (345 м), а также третье в России по глубине озеро
+              Телецкое.
+            </p>
+            <div class="images-followers">
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img41.jpg"
+                  alt="Фотография пользователя №41">
+              </a>
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img42.jpg"
+                  alt="Фотография пользователя №42">
+              </a>
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img5.jpg"
+                  alt="Фотография пользователя №5">
+              </a>
+              <span class="explore-cart__info-text">
+                148 Подписчиков
+              </span>
+            </div>
+            <button class="explore-cart__btn"
+              onclick="this.className = (this.className == 'explore-cart__btn' ? 'explore-cart__btn-change' : 'explore-cart__btn')"
+              type="button">
+              <svg class="explore-cart__plus" role="img" aria-label="Подписаться на группу" width="16" height="16"
+                viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.416 0 8 0ZM12 8.8H8.8V12H7.2V8.8H4V7.2H7.2V4H8.8V7.2H12V8.8Z"
+                  fill="" />
+              </svg>
+              <svg class="explore-cart__agree" role="img" aria-label="Отписаться от группы" width="16" height="16"
+                viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0 8C0 3.584 3.584 0 8 0C12.416 0 16 3.584 16 8C16 12.416 12.416 16 8 16C3.584 16 0 12.416 0 8ZM2.4 8L6.4 12L13.6 4.8L12.472 3.664L6.4 9.736L3.528 6.872L2.4 8Z"
+                  fill="white" />
+              </svg>
+              <span class="explore-cart__start">Подписаться на группу</span> <span
+                class="explore-cart__hidden">Подписанны</span>
+            </button>
+          </div>
+        </article>
+      </a>
+    </div>
+    <div class="explore-cart__wrapper">
+      <a class="explore-cart__link" href="#">
+        <article class="explore-cart">
+          <img class="explore-cart__img" src="images/explore/img10.jpg" alt="Фотография группы 'США'">
+          <div class="explore-cart__inner">
+            <h3 class="explore-cart__title">
+              США
+            </h3>
+            <p class="explore-cart__text">
+              Соединённые Штаты Америки это смесь крупных мегаполисов с небоскрёбами и деловыми центрами, роскошных
+              районов загородных вилл и превосходных курортов в южной части страны. Всемирно известные деловые центры
+              Вашингтон и Нью-Йорк предлагают отдыхающим и туристам большое количество экскурсий, уникальных Мемориалов,
+              художественных инсталляций, а также очень интересных Музеев.
+            </p>
+            <div class="images-followers">
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img32.jpg"
+                  alt="Фотография пользователя №32">
+              </a>
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img43.jpg"
+                  alt="Фотография пользователя №43">
+              </a>
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img44.jpg"
+                  alt="Фотография пользователя №44">
+              </a>
+              <span class="explore-cart__info-text">
+                328 Подписчиков
+              </span>
+            </div>
+            <button class="explore-cart__btn"
+              onclick="this.className = (this.className == 'explore-cart__btn' ? 'explore-cart__btn-change' : 'explore-cart__btn')"
+              type="button">
+              <svg class="explore-cart__plus" role="img" aria-label="Подписаться на группу" width="16" height="16"
+                viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.416 0 8 0ZM12 8.8H8.8V12H7.2V8.8H4V7.2H7.2V4H8.8V7.2H12V8.8Z"
+                  fill="" />
+              </svg>
+              <svg class="explore-cart__agree" role="img" aria-label="Отписаться от группы" width="16" height="16"
+                viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0 8C0 3.584 3.584 0 8 0C12.416 0 16 3.584 16 8C16 12.416 12.416 16 8 16C3.584 16 0 12.416 0 8ZM2.4 8L6.4 12L13.6 4.8L12.472 3.664L6.4 9.736L3.528 6.872L2.4 8Z"
+                  fill="white" />
+              </svg>
+              <span class="explore-cart__start">Подписаться на группу</span> <span
+                class="explore-cart__hidden">Подписанны</span>
+            </button>
+          </div>
+        </article>
+      </a>
+    </div>
+    <div class="explore-cart__wrapper">
+      <a class="explore-cart__link" href="#">
+        <article class="explore-cart">
+          <img class="explore-cart__img" src="images/explore/img11.jpg" alt="Фотография группы 'Австрия'">
+          <div class="explore-cart__inner">
+            <h3 class="explore-cart__title">
+              Австрия
+            </h3>
+            <p class="explore-cart__text">
+              Горнолыжные курорты Австрии известны любому — здесь самые снежные склоны и лучшие трассы. Вас ждут
+              блистательная Вена и озерный край Зальцбург, замки, музеи и достопримечательности. Все об Австрии от
+              Тонкостей туризма — виза, туры, карты и отели.
+            </p>
+            <div class="images-followers">
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img45.jpg"
+                  alt="Фотография пользователя №45">
+              </a>
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img46.jpg"
+                  alt="Фотография пользователя №46">
+              </a>
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img47.jpg"
+                  alt="Фотография пользователя №47">
+              </a>
+              <span class="explore-cart__info-text">
+                297 Подписчиков
+              </span>
+            </div>
+            <button class="explore-cart__btn"
+              onclick="this.className = (this.className == 'explore-cart__btn' ? 'explore-cart__btn-change' : 'explore-cart__btn')"
+              type="button">
+              <svg class="explore-cart__plus" role="img" aria-label="Подписаться на группу" width="16" height="16"
+                viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.416 0 8 0ZM12 8.8H8.8V12H7.2V8.8H4V7.2H7.2V4H8.8V7.2H12V8.8Z"
+                  fill="" />
+              </svg>
+              <svg class="explore-cart__agree" role="img" aria-label="Отписаться от группы" width="16" height="16"
+                viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0 8C0 3.584 3.584 0 8 0C12.416 0 16 3.584 16 8C16 12.416 12.416 16 8 16C3.584 16 0 12.416 0 8ZM2.4 8L6.4 12L13.6 4.8L12.472 3.664L6.4 9.736L3.528 6.872L2.4 8Z"
+                  fill="white" />
+              </svg>
+              <span class="explore-cart__start">Подписаться на группу</span> <span
+                class="explore-cart__hidden">Подписанны</span>
+            </button>
+          </div>
+        </article>
+      </a>
+    </div>
+    <div class="explore-cart__wrapper">
+      <a class="explore-cart__link" href="#">
+        <article class="explore-cart">
+          <img class="explore-cart__img" src="images/slider/slider-img5.jpg" alt="Фотография группы 'Греция'">
+          <div class="explore-cart__inner">
+            <h3 class="explore-cart__title">
+              Греция
+            </h3>
+            <p class="explore-cart__text">
+              Греция — страна, где древности на каждом шагу: Афины, Дельфы, Фивы и Метеоры, скальные монастыри и святая
+              гора Афон. Еще здесь классные пляжи, чистое море, живописные острова и спа-отели. Родос, Халкидики и Кос —
+              все о Греции: погода, карты, виза и фото.
+            </p>
+            <div class="images-followers">
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img48.jpg"
+                  alt="Фотография пользователя №48">
+              </a>
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img49.jpg"
+                  alt="Фотография пользователя №49">
+              </a>
+              <a class="images-followers__wrapper-img fig" href="#">
+                <img class="images-followers__people-img" src="images/group-chat/img50.jpg"
+                  alt="Фотография пользователя №50">
+              </a>
+              <span class="explore-cart__info-text">
+                597 Подписчиков
+              </span>
+            </div>
+            <button class="explore-cart__btn-change"
+              onclick="this.className = (this.className == 'explore-cart__btn' ? 'explore-cart__btn-change' : 'explore-cart__btn')"
+              type="button">
+              <svg class="explore-cart__plus" role="img" aria-label="Подписаться на группу" width="16" height="16"
+                viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.416 0 8 0ZM12 8.8H8.8V12H7.2V8.8H4V7.2H7.2V4H8.8V7.2H12V8.8Z"
+                  fill="" />
+              </svg>
+              <svg class="explore-cart__agree" role="img" aria-label="Отписаться от группы" width="16" height="16"
+                viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0 8C0 3.584 3.584 0 8 0C12.416 0 16 3.584 16 8C16 12.416 12.416 16 8 16C3.584 16 0 12.416 0 8ZM2.4 8L6.4 12L13.6 4.8L12.472 3.664L6.4 9.736L3.528 6.872L2.4 8Z"
+                  fill="white" />
+              </svg>
+              <span class="explore-cart__start">Подписаться на группу</span> <span
+                class="explore-cart__hidden">Подписанны</span>
+            </button>
+          </div>
+        </article>
+      </a>
+    </div>
+  </div>
+</div>
+  </main>
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
