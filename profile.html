@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/profile.min.css">
+</head>
+
+<body>
+  
+  <header class="header">
+  <div class="container">
+    <div class="header__mobile-wrapper">
+      <a href="#">
+        <img class="logo" src="images/logo.png" alt="Логотип Nomad">
+      </a>
+      <div class="header__inner">
+        <div class="header__wrapper">
+          <form class="header__form-search" action="#">
+            <input class="header__input-search" type="text" required minlength="3" name="header__input-profile">
+            <button class="header__button" type="submit">
+              <svg class="header__search" role="img" aria-label="Поиск" width="20" height="20" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M14.2939 12.5786H13.3905L13.0703 12.2699C14.191 10.9663 14.8656 9.27387 14.8656 7.43282C14.8656 3.32762 11.538 0 7.43282 0C3.32762 0 0 3.32762 0 7.43282C0 11.538 3.32762 14.8656 7.43282 14.8656C9.27387 14.8656 10.9663 14.191 12.2699 13.0703L12.5786 13.3905V14.2939L18.2962 20L20 18.2962L14.2939 12.5786ZM7.43282 12.5786C4.58548 12.5786 2.28702 10.2802 2.28702 7.43282C2.28702 4.58548 4.58548 2.28702 7.43282 2.28702C10.2802 2.28702 12.5786 4.58548 12.5786 7.43282C12.5786 10.2802 10.2802 12.5786 7.43282 12.5786Z"
+                  fill="" />
+              </svg>
+            </button>
+          </form>
+          <a class="header__link" href="#">
+            <svg class="header__chat" role="img" aria-label="Сообщения" width="22" height="22" viewBox="0 0 22 22"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M19.8 0H2.2C0.99 0 0.011 0.99 0.011 2.2L0 22L4.4 17.6H19.8C21.01 17.6 22 16.61 22 15.4V2.2C22 0.99 21.01 0 19.8 0ZM17.6 13.2H4.4V11H17.6V13.2ZM17.6 9.9H4.4V7.7H17.6V9.9ZM17.6 6.6H4.4V4.4H17.6V6.6Z"
+                fill="" />
+            </svg>
+            <div class="header__chat-num">3</div>
+          </a>
+          <a class="header__link" href="#">
+            <svg class="header__alert" role="img" aria-label="Уведомления" width="20" height="24" viewBox="0 0 20 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M17.5 16.6154V10.4615C17.5 6.68308 15.45 3.52 11.875 2.68308V1.84615C11.875 0.824615 11.0375 0 10 0C8.9625 0 8.125 0.824615 8.125 1.84615V2.68308C4.5375 3.52 2.5 6.67077 2.5 10.4615V16.6154L0 19.0769V20.3077H20V19.0769L17.5 16.6154ZM11.25 16.6154H8.75V14.1538H11.25V16.6154ZM11.25 11.6923H8.75V6.76923H11.25V11.6923ZM10 24C11.375 24 12.5 22.8923 12.5 21.5385H7.5C7.5 22.8923 8.6125 24 10 24Z"
+                fill="" />
+            </svg>
+            <div class="header__alert-num">2</div>
+          </a>
+          <a class="header__create-link" href="#">
+            <svg class="header__plus" role="img" aria-label="Новая поездка" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
+              <path fill-rule="evenodd"
+                d="M 11 2 L 11 11 L 2 11 L 2 13 L 11 13 L 11 22 L 13 22 L 13 13 L 22 13 L 22 11 L 13 11 L 13 2 Z" />
+            </svg>
+            Новая поездка
+          </a>
+        </div>
+        <a class="header__link-profile" href="#">
+          <img class="header__link-img" src="images/group-chat/img33.jpg" alt="Профильное изображение">
+        </a>
+      </div>
+
+
+
+      <!-- Хедер меню -->
+      <div class="head">
+        <nav class="nav" data-nav>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link-profile">
+                Профиль
+                <svg class="nav__profile nav-icon" role="img" aria-label="Перейти в профиль" width="13" height="13"
+                  viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M6.5 0C2.912 0 0 2.912 0 6.5C0 10.088 2.912 13 6.5 13C10.088 13 13 10.088 13 6.5C13 2.912 10.088 0 6.5 0ZM6.5 1.95C7.579 1.95 8.45 2.821 8.45 3.9C8.45 4.979 7.579 5.85 6.5 5.85C5.421 5.85 4.55 4.979 4.55 3.9C4.55 2.821 5.421 1.95 6.5 1.95ZM6.5 11.18C4.875 11.18 3.4385 10.348 2.6 9.087C2.6195 7.7935 5.2 7.085 6.5 7.085C7.7935 7.085 10.3805 7.7935 10.4 9.087C9.5615 10.348 8.125 11.18 6.5 11.18Z"
+                    fill="currentColor" />
+                </svg>
+              </a>
+            </li>
+            <li class="nav__item nav__link-search">
+              <a href="#" class="nav__link">
+                Поиск
+                <svg class="nav__search nav-icon" role="img" aria-label="Поиск" width="20" height="20"
+                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M14.2939 12.5786H13.3905L13.0703 12.2699C14.191 10.9663 14.8656 9.27387 14.8656 7.43282C14.8656 3.32762 11.538 0 7.43282 0C3.32762 0 0 3.32762 0 7.43282C0 11.538 3.32762 14.8656 7.43282 14.8656C9.27387 14.8656 10.9663 14.191 12.2699 13.0703L12.5786 13.3905V14.2939L18.2962 20L20 18.2962L14.2939 12.5786ZM7.43282 12.5786C4.58548 12.5786 2.28702 10.2802 2.28702 7.43282C2.28702 4.58548 4.58548 2.28702 7.43282 2.28702C10.2802 2.28702 12.5786 4.58548 12.5786 7.43282C12.5786 10.2802 10.2802 12.5786 7.43282 12.5786Z"
+                    fill="" />
+                </svg>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link-message">
+                Сообщения
+                <svg class="nav__message nav-icon" role="img" aria-label="Сообщения" xmlns="http://www.w3.org/2000/svg"
+                  width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                  <path
+                    d="M24.581 12.331v-2.165l-8.581 5.373-8.581-5.373v2.165l8.581 5.293 8.581-5.293zM24.581 8c1.123 0 2.085 0.962 2.085 2.165v12.832c0 1.123-0.962 2.165-2.085 2.165h-17.163c-1.123 0-2.085-0.962-2.085-2.165v-12.832c0-1.123 0.962-2.165 2.085-2.165 0 0 17.163 0 17.163 0z">
+                  </path>
+                </svg>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link-alert">
+                Уведомления
+                <span></span>
+                <svg class="nav__alert nav-icon" role="img" aria-label="Уведомления" width="20" height="24"
+                  viewBox="0 0 20 24" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M17.5 16.6154V10.4615C17.5 6.68308 15.45 3.52 11.875 2.68308V1.84615C11.875 0.824615 11.0375 0 10 0C8.9625 0 8.125 0.824615 8.125 1.84615V2.68308C4.5375 3.52 2.5 6.67077 2.5 10.4615V16.6154L0 19.0769V20.3077H20V19.0769L17.5 16.6154ZM11.25 16.6154H8.75V14.1538H11.25V16.6154ZM11.25 11.6923H8.75V6.76923H11.25V11.6923ZM10 24C11.375 24 12.5 22.8923 12.5 21.5385H7.5C7.5 22.8923 8.6125 24 10 24Z"
+                    fill="currentColor" />
+                </svg>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link-settings">
+                Настройки
+                <svg class="nav__settings nav-icon" role="img" aria-label="Настройки" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="507.451px" height="507.45px"
+                  viewBox="0 0 507.451 507.45" style="enable-background:new 0 0 507.451 507.45;" xml:space="preserve">
+                  <g>
+                    <g id="settings">
+                      <path d="M440.813,280.5c0-7.65,2.55-15.3,2.55-25.5s0-17.85-2.55-25.5l53.55-43.35c5.1-5.1,5.1-10.2,2.55-15.3l-51-89.25
+			c-2.55-2.55-7.649-5.1-15.3-2.55l-63.75,25.5c-12.75-10.2-28.05-17.85-43.35-25.5l-10.2-66.3C315.863,5.1,308.212,0,303.113,0
+			h-102c-5.101,0-12.75,5.1-12.75,10.2l-10.2,68.85c-15.3,5.1-28.05,15.3-43.35,25.5l-61.2-25.5c-7.65-2.55-12.75,0-17.851,5.1
+			l-51,89.25c-2.55,2.55,0,10.2,5.1,15.3l53.55,40.8c0,7.65-2.55,15.3-2.55,25.5s0,17.85,2.55,25.5l-53.55,43.35
+			c-5.1,5.101-5.1,10.2-2.55,15.301l51,89.25c2.55,2.55,7.649,5.1,15.3,2.55l63.75-25.5c12.75,10.2,28.05,17.85,43.35,25.5
+			l10.2,66.3c0,5.1,5.1,10.2,12.75,10.2h102c5.101,0,12.75-5.101,12.75-10.2l10.2-66.3c15.3-7.65,30.6-15.3,43.35-25.5l63.75,25.5
+			c5.101,2.55,12.75,0,15.301-5.101l51-89.25c2.55-5.1,2.55-12.75-2.551-15.3L440.813,280.5z M252.113,344.25
+			c-48.45,0-89.25-40.8-89.25-89.25s40.8-89.25,89.25-89.25s89.25,40.8,89.25,89.25S300.563,344.25,252.113,344.25z" />
+                    </g>
+                </svg>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link-newtravel">
+                Помощь
+                <svg class="nav__newtravel nav-icon" role="img" aria-label="Помощь" fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
+                  <path fill-rule="evenodd"
+                    d="M 11 2 L 11 11 L 2 11 L 2 13 L 11 13 L 11 22 L 13 22 L 13 13 L 22 13 L 22 11 L 13 11 L 13 2 Z" />
+                </svg>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link-mytravel">
+                Мои поездки
+                <svg class="nav__mytravel nav-icon" role="img" aria-label="Мои поездки" width="21" height="18"
+                  viewBox="0 0 21 18" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0 11H5V6H0V11ZM0 18H5V13H0V18ZM0 5H5V0H0V5ZM6 11H21V6H6V11ZM6 18H21V13H6V18ZM6 0V5H21V0H6Z"
+                    fill="currentColor" />
+                </svg>
+              </a>
+            </li>
+            <li class="nav__item nav-hidden">
+              <a href="#" class="nav__link nav__link-mytravel">
+                Подписчики
+                <svg class="nav__mytravel nav-icon" role="img" aria-label="Подписчики" viewBox="0 0 640 512"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M192 256c61.9 0 112-50.1 112-112S253.9 32 192 32 80 82.1 80 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C51.6 288 0 339.6 0 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zM480 256c53 0 96-43 96-96s-43-96-96-96-96 43-96 96 43 96 96 96zm48 32h-3.8c-13.9 4.8-28.6 8-44.2 8s-30.3-3.2-44.2-8H432c-20.4 0-39.2 5.9-55.7 15.4 24.4 26.3 39.7 61.2 39.7 99.8v38.4c0 2.2-.5 4.3-.6 6.4H592c26.5 0 48-21.5 48-48 0-61.9-50.1-112-112-112z"
+                    fill="currentColor" />
+                </svg>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link-newtravel">
+                Новая поездка
+                <svg class="nav__newtravel nav-icon" role="img" aria-label=" Новая поездка"
+                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  width="510px" height="510px" viewBox="0 0 510 510" style="enable-background:new 0 0 510 510;"
+                  xml:space="preserve">
+                  <g id="flights">
+                    <path d="M510,255c0-20.4-17.85-38.25-38.25-38.25H331.5L204,12.75h-51l63.75,204H76.5l-38.25-51H0L25.5,255L0,344.25h38.25
+			                  l38.25-51h140.25l-63.75,204h51l127.5-204h140.25C492.15,293.25,510,275.4,510,255z"
+                      fill="currentColor" />
+                  </g>
+                </svg>
+              </a>
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link-newtravel">
+                Выйти
+                <svg class="nav__newtravel nav-icon" role="img" aria-label="Выход" xmlns="http://www.w3.org/2000/svg"
+                  width="16" height="16" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M11.992 8.994V6.996H7.995v-2h3.997V2.999l3.998 2.998-3.998 2.998zm-1.998 2.998H5.996V2.998L2 1h7.995v2.998h1V1c0-.55-.45-.999-1-.999H.999A1.001 1.001 0 0 0 0 1v11.372c0 .39.22.73.55.91L5.996 16v-3.008h3.998c.55 0 1-.45 1-1V7.996h-1v3.998z"
+                    fill="currentColor" />
+                </svg>
+              </a>
+            </li>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="burger header__burger" data-burger aria-label="Открыть меню" aria-expanded="false">
+          <img class="header__link-img header__img" src="images/group-chat/img33.jpg" alt="Профильное изображение">
+        </button>
+      </div>
+
+
+    </div>
+    <div class="overlay"></div>
+  </div>
+</header>
+
+  <main class="main">
+  <div class="statistics">
+  <div class="statistics__margin-top">
+    <img class="statistics__img header-img" src="images/profile/img1.jpg" alt="Главная фотография профиля">
+  </div>
+  <div class="statistics__line">
+    <div class="container">
+      <div class="statistics__inner">
+        <div class="statistics__items">
+          <div class="statistics__item">
+            <span class="statistics__numbers">6</span>
+            <span class="statistics__text">Всего поездок</span>
+          </div>
+          <div class="statistics__item">
+            <span class="statistics__numbers">63</span>
+            <span class="statistics__text-subscribes">Подписки</span>
+          </div>
+          <div class="statistics__item">
+            <span class="statistics__numbers">68</span>
+            <span class="statistics__text">Подписчиков</span>
+          </div>
+        </div>
+        <a class="statistics__edit" href="#">
+          Редактировать профиль
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="statistics__wrapper">
+      <div class="statistics__wrapper-cart">
+        <div class="cart-info">
+          <div class="cart-info__img-wrapper">
+            <img class="cart-info__img" src="images/group-chat/img33.jpg" alt="Профильное изображение">
+          </div>
+          <div class="cart-info__wrapper">
+            <div class="cart-info__title">Майкл</div>
+            <div class="cart-info__subtitle">
+              <svg class="cart-info__icon" role="img" aria-label="Местоположение" width="11" height="16"
+                viewBox="0 0 11 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M5.5 0C2.45929 0 0 2.504 0 5.6C0 9.8 5.5 16 5.5 16C5.5 16 11 9.8 11 5.6C11 2.504 8.54071 0 5.5 0ZM5.5 7.6C4.41571 7.6 3.53571 6.704 3.53571 5.6C3.53571 4.496 4.41571 3.6 5.5 3.6C6.58429 3.6 7.46429 4.496 7.46429 5.6C7.46429 6.704 6.58429 7.6 5.5 7.6Z"
+                  fill="" />
+              </svg>
+              Коста-Рика, США
+            </div>
+            <div class="cart-info__title-bio">Интересы</div>
+            <p class="cart-info__bio-text">
+              <a class="cart-info__span" href="#">Прогулки по городу</a>, <a class="cart-info__span" href="#">Чай</a>,
+              <a class="cart-info__span" href="#">Вкусная еда</a>,
+              <a class="cart-info__span" href="#">Секс</a>, <a class="cart-info__span" href="#">Активный отдых</a>
+            </p>
+            <div class="cart-info__title-things">Вещи которые я люблю делать</div>
+            <p class="cart-info__things-text">Знакомиться в первый раз
+              с новым человеком, или, еще лучше, знакомиться с парой или группой людей.</p>
+            <p class="cart-info__things-text">Черный чай с молоком
+              и без сахара. Ни в коем случае не надо сахара! Также, гулять на море, наблюдать за волнами, кормить чаек,
+              сидеть просто на песке, вдыхать глоток новых надежд и выдыхать ненужные воспоминания.</p>
+            <div class="cart-info__items">
+              <a class="cart-info__item" href="#">Знакомства</a>
+              <a class="cart-info__item" href="#">Путешествия</a>
+              <a class="cart-info__item" href="#">Прогулки</a>
+              <a class="cart-info__item" href="#">Кафе</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="statistics__wrapper-post">
+
+        <div class="post">
+          <div class="post__header">
+            <div class="post__header-wrapper">
+              <a href="#">
+                <img class="post__img" src="images/slider/slider-img12.jpg" alt="Профильная фотография">
+              </a>
+              <div class="post__header-inner">
+                <a href="#">
+                  <div class="post__name">Эмилия</div>
+                </a>
+                <span class="post__time">5 часов назад</span>
+              </div>
+            </div>
+            <div class="post__btn-wrapper">
+              <div class="post__div"></div>
+              <button class="post__toggle" id="toggle-link" type="button"></button>
+              <div class="post__btn-content" id="message">
+                <a class="post__btn-text-1 post__btn-text" href="#">
+                  Отметить
+                  <svg class="post__btn-1 post__btn" role="img" aria-label="Сделать заметку" height="128px" id="Layer_1"
+                    style="enable-background:new 0 0 128 128;" viewBox="0 0 128 128" width="128px" xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g>
+                      <path
+                        d="M36.108,110.473l70.436-70.436L87.963,21.457L17.526,91.893c-0.378,0.302-0.671,0.716-0.803,1.22   l-5.476,20.803c-0.01,0.04-0.01,0.082-0.019,0.121c-0.018,0.082-0.029,0.162-0.039,0.247c-0.007,0.075-0.009,0.147-0.009,0.222   c-0.001,0.077,0.001,0.147,0.009,0.225c0.01,0.084,0.021,0.166,0.039,0.246c0.008,0.04,0.008,0.082,0.019,0.121   c0.007,0.029,0.021,0.055,0.031,0.083c0.023,0.078,0.053,0.154,0.086,0.23c0.029,0.067,0.057,0.134,0.09,0.196   c0.037,0.066,0.077,0.127,0.121,0.189c0.041,0.063,0.083,0.126,0.13,0.184c0.047,0.059,0.1,0.109,0.152,0.162   c0.053,0.054,0.105,0.105,0.163,0.152c0.056,0.048,0.119,0.09,0.182,0.131c0.063,0.043,0.124,0.084,0.192,0.12   c0.062,0.033,0.128,0.062,0.195,0.09c0.076,0.033,0.151,0.063,0.23,0.087c0.028,0.009,0.054,0.023,0.083,0.031   c0.04,0.01,0.081,0.01,0.121,0.02c0.081,0.017,0.162,0.028,0.246,0.037c0.077,0.009,0.148,0.011,0.224,0.01   c0.075,0,0.147-0.001,0.223-0.008c0.084-0.011,0.166-0.022,0.247-0.039c0.04-0.01,0.082-0.01,0.121-0.02l20.804-5.475   C35.393,111.146,35.808,110.853,36.108,110.473z M19.651,108.349c-0.535-0.535-1.267-0.746-1.964-0.649l3.183-12.094l11.526,11.525   L20.3,110.313C20.398,109.616,20.188,108.884,19.651,108.349z"
+                        fill="" />
+                      <path d="M109.702,36.879l-18.58-18.581l7.117-7.117c0,0,12.656,4.514,18.58,18.582L109.702,36.879z"
+                        fill="" />
+                    </g>
+                  </svg>
+                </a>
+                <button class="post__btn-text-2 post__btn-text" type="button" data-subscribe="0">
+                  <span class="post__span">Подписаться</span>
+                  <svg class="post__btn-2 post__btn" role="img" aria-label="Подписаться на человека" width="20"
+                    height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M11 10C11.1035 10 11.2052 10.0079 11.3045 10.023C10.9143 10.302 10.5621 10.6308 10.2572 11H4C3.44772 11 3 11.4477 3 12V13.5C3 14.9071 4.57862 16 7.5 16C8.11725 16 8.67455 15.9512 9.16969 15.861C9.25335 16.1896 9.36661 16.5065 9.50646 16.8085C8.90367 16.9334 8.23233 17 7.5 17C4.08805 17 2 15.5544 2 13.5V12C2 10.8954 2.89543 10 4 10H11Z"
+                      fill="" />
+                    <path
+                      d="M17 6.5C17 7.88071 15.8807 9 14.5 9C13.1193 9 12 7.88071 12 6.5C12 5.11929 13.1193 4 14.5 4C15.8807 4 17 5.11929 17 6.5ZM14.5 5C13.6716 5 13 5.67157 13 6.5C13 7.32843 13.6716 8 14.5 8C15.3284 8 16 7.32843 16 6.5C16 5.67157 15.3284 5 14.5 5Z"
+                      fill="" />
+                    <path
+                      d="M7.5 2C9.433 2 11 3.567 11 5.5C11 7.433 9.433 9 7.5 9C5.567 9 4 7.433 4 5.5C4 3.567 5.567 2 7.5 2ZM7.5 3C6.11929 3 5 4.11929 5 5.5C5 6.88071 6.11929 8 7.5 8C8.88071 8 10 6.88071 10 5.5C10 4.11929 8.88071 3 7.5 3Z"
+                      fill="" />
+                    <path
+                      d="M19 14.5C19 16.9853 16.9853 19 14.5 19C12.0147 19 10 16.9853 10 14.5C10 12.0147 12.0147 10 14.5 10C16.9853 10 19 12.0147 19 14.5ZM15 12.5C15 12.2239 14.7761 12 14.5 12C14.2239 12 14 12.2239 14 12.5V14H12.5C12.2239 14 12 14.2239 12 14.5C12 14.7761 12.2239 15 12.5 15H14V16.5C14 16.7761 14.2239 17 14.5 17C14.7761 17 15 16.7761 15 16.5V15H16.5C16.7761 15 17 14.7761 17 14.5C17 14.2239 16.7761 14 16.5 14H15V12.5Z"
+                      fill="" />
+                  </svg>
+                </button>
+                <a class="post__btn-text-3 post__btn-text" href="#">
+                  Написать
+                  <svg class="post__btn-3 post__btn" role="img" aria-label="Написать сообщение"
+                    xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                    <path
+                      d="M24.581 12.331v-2.165l-8.581 5.373-8.581-5.373v2.165l8.581 5.293 8.581-5.293zM24.581 8c1.123 0 2.085 0.962 2.085 2.165v12.832c0 1.123-0.962 2.165-2.085 2.165h-17.163c-1.123 0-2.085-0.962-2.085-2.165v-12.832c0-1.123 0.962-2.165 2.085-2.165 0 0 17.163 0 17.163 0z"
+                      fill=""></path>
+                  </svg>
+                </a>
+                <button class="post__btn-text-4 post__btn-text" type="button">
+                  Пожаловаться
+                  <svg class="post__btn-4 post__btn" role="img" aria-label="Пожаловаться на человека"
+                    xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12">
+                    <path fill=""
+                      d="M10 2.503l1.29 1.248a.426.426 0 00.588 0 .393.393 0 000-.57L10.59 1.934 11.88.685a.394.394 0 00-.013-.557.427.427 0 00-.576-.013L10 1.364 8.71.118a.426.426 0 00-.4-.104.41.41 0 00-.295.284.394.394 0 00.108.389L9.41 1.933 8.122 3.18a.393.393 0 000 .57.423.423 0 00.589 0L10 2.504v-.002zm-2.003 8.939a.5.5 0 01-.994.116C6.833 10.108 5.544 9 4 9S1.167 10.108.997 11.558a.5.5 0 01-.994-.116C.234 9.48 1.956 8 4 8c2.044 0 3.766 1.48 3.997 3.442zM4 7a2.5 2.5 0 110-5 2.5 2.5 0 010 5zm0-1a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                  </svg>
+                </button>
+                <!-- <button class="post__btn-text-5 post__btn-text" type="reset">
+                  Удалить
+                  <svg class="post__btn-5 post__btn">
+                    <use xlink:href="images/sprite.svg#delete"></use>
+                  </svg>
+                </button> -->
+              </div>
+            </div>
+          </div>
+          <div class="post__image">
+            <img class="post__watch-img" src="images/slider/slider-img11.jpg" alt="Фотография с места посещения">
+          </div>
+          <div class="post__content">
+            <h2 class="post__content-title">
+              Путешествие по Грузии
+            </h2>
+            <p class="post__content-text">
+              Ищу попутчиков для путешествия по Грузии на Август.
+              Продолжительность поездки 3 недели. Вайбер для связи 89152408548. Или WhatsApp.
+              Кто заинтересован пишите.
+            </p>
+            <div class="post__content-info">
+              <div class="post__content-place">
+                <svg class="post__icon-place" role="img" aria-label="Местоположение" width="11" height="16"
+                  viewBox="0 0 11 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M5.5 0C2.45929 0 0 2.504 0 5.6C0 9.8 5.5 16 5.5 16C5.5 16 11 9.8 11 5.6C11 2.504 8.54071 0 5.5 0ZM5.5 7.6C4.41571 7.6 3.53571 6.704 3.53571 5.6C3.53571 4.496 4.41571 3.6 5.5 3.6C6.58429 3.6 7.46429 4.496 7.46429 5.6C7.46429 6.704 6.58429 7.6 5.5 7.6Z"
+                    fill="" />
+                </svg>
+                Грузия
+              </div>
+              <div class="post__content-data">
+                <svg class="post__icon-data" role="img" aria-label="Запланированная дата посещения" width="14"
+                  height="16" viewBox="0 0 14 16" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M4.66667 7.2H3.11111V8.8H4.66667V7.2ZM7.77778 7.2H6.22222V8.8H7.77778V7.2ZM10.8889 7.2H9.33333V8.8H10.8889V7.2ZM12.4444 1.6H11.6667V0H10.1111V1.6H3.88889V0H2.33333V1.6H1.55556C0.692222 1.6 0.00777778 2.32 0.00777778 3.2L0 14.4C0 15.28 0.692222 16 1.55556 16H12.4444C13.3 16 14 15.28 14 14.4V3.2C14 2.32 13.3 1.6 12.4444 1.6ZM12.4444 14.4H1.55556V5.6H12.4444V14.4Z"
+                    fill="" />
+                </svg>
+                2 Авг, 2022 - 24 Авг, 2022
+              </div>
+              <div class="post__content-people">
+                <svg class="post__icon-people" role="img" aria-label="Сколько поедет" width="13" height="13"
+                  viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M6.5 0C2.912 0 0 2.912 0 6.5C0 10.088 2.912 13 6.5 13C10.088 13 13 10.088 13 6.5C13 2.912 10.088 0 6.5 0ZM6.5 1.95C7.579 1.95 8.45 2.821 8.45 3.9C8.45 4.979 7.579 5.85 6.5 5.85C5.421 5.85 4.55 4.979 4.55 3.9C4.55 2.821 5.421 1.95 6.5 1.95ZM6.5 11.18C4.875 11.18 3.4385 10.348 2.6 9.087C2.6195 7.7935 5.2 7.085 6.5 7.085C7.7935 7.085 10.3805 7.7935 10.4 9.087C9.5615 10.348 8.125 11.18 6.5 11.18Z"
+                    fill="" />
+                </svg>
+                1 Взрослый
+              </div>
+            </div>
+            <div class="post__images-followers__wrapper">
+              <div class="images-followers">
+                <div class="images-followers__wrapper-profile">
+                  <a class="images-followers__wrapper-img fig" href="#">
+                    <img class="images-followers__people-img" src="images/group-chat/img15.jpg"
+                      alt="Профильная фотография">
+                  </a>
+                  <a class="images-followers__wrapper-img fig" href="#">
+                    <img class="images-followers__people-img" src="images/group-chat/img13.jpg"
+                      alt="Профильная фотография">
+                  </a>
+                  <a class="images-followers__wrapper-img fig" href="#">
+                    <img class="images-followers__people-img" src="images/group-chat/img12.jpg"
+                      alt="Профильная фотография">
+                  </a>
+                  <a class="images-followers__circle fig" href="#">
+                    +3
+                  </a>
+                </div>
+                <div class="images-followers__action">
+                  <button class="content-chat__link" type="button"
+                    onclick="this.className = (this.className == 'content-chat__link' ? 'content-chat__link-change' : 'content-chat__link')">
+                    <svg class="content-chat__heart" role="img" aria-label="Кнопка 'нравиться'" width="13" height="12"
+                      viewBox="0 0 13 12" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M6.5 12L5.5575 11.1368C2.21 8.08283 0 6.06866 0 3.59673C0 1.58256 1.573 0 3.575 0C4.706 0 5.7915 0.5297 6.5 1.36676C7.2085 0.5297 8.294 0 9.425 0C11.427 0 13 1.58256 13 3.59673C13 6.06866 10.79 8.08283 7.4425 11.1433L6.5 12Z"
+                        fill="" />
+                    </svg>
+                    Нравиться
+                  </button>
+                  <a class="images-followers__link images-followers__link--hover" href="#">
+                    <svg class="images-followers__chat" role="img" aria-label="Коментарий" width="22" height="22"
+                      viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M19.8 0H2.2C0.99 0 0.011 0.99 0.011 2.2L0 22L4.4 17.6H19.8C21.01 17.6 22 16.61 22 15.4V2.2C22 0.99 21.01 0 19.8 0ZM17.6 13.2H4.4V11H17.6V13.2ZM17.6 9.9H4.4V7.7H17.6V9.9ZM17.6 6.6H4.4V4.4H17.6V6.6Z"
+                        fill="" />
+                    </svg>
+                    Комментарий
+                  </a>
+                  <a class="images-followers__link images-followers__link--hover2" href="#">
+                    <svg class="images-followers__share" role="img" aria-label="Поделиться" width="16" height="18"
+                      viewBox="0 0 16 18" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M13.3333 12.7229C12.6578 12.7229 12.0533 12.994 11.5911 13.4187L5.25333 9.66867C5.29778 9.46084 5.33333 9.25301 5.33333 9.03614C5.33333 8.81928 5.29778 8.61145 5.25333 8.40361L11.52 4.68976C12 5.14157 12.6311 5.42169 13.3333 5.42169C14.8089 5.42169 16 4.21084 16 2.71084C16 1.21084 14.8089 0 13.3333 0C11.8578 0 10.6667 1.21084 10.6667 2.71084C10.6667 2.92771 10.7022 3.13554 10.7467 3.34337L4.48 7.05723C4 6.60542 3.36889 6.3253 2.66667 6.3253C1.19111 6.3253 0 7.53614 0 9.03614C0 10.5361 1.19111 11.747 2.66667 11.747C3.36889 11.747 4 11.4669 4.48 11.0151L10.8089 14.7741C10.7644 14.9639 10.7378 15.1627 10.7378 15.3614C10.7378 16.8163 11.9022 18 13.3333 18C14.7644 18 15.9289 16.8163 15.9289 15.3614C15.9289 13.9066 14.7644 12.7229 13.3333 12.7229Z"
+                        fill="" />
+                    </svg>
+                    Поделиться
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="post">
+          <div class="post__header">
+            <div class="post__header-wrapper">
+              <a href="#">
+                <img class="post__img" src="images/slider/slider-img7.jpg" alt="Профильная фотография">
+              </a>
+              <div class="post__header-inner">
+                <a href="#">
+                  <div class="post__name">Кельвон</div>
+                </a>
+                <span class="post__time">13 часов назад</span>
+              </div>
+            </div>
+            <div class="post__btn-wrapper">
+              <div class="post__div"></div>
+              <button class="post__toggle" id="toggle-link1" type="button"></button>
+              <div class="post__btn-content" id="message1">
+                <a class="post__btn-text-1 post__btn-text" href="#">
+                  Отметить
+                  <svg class="post__btn-1 post__btn" role="img" aria-label="Сделать заметку" height="128px" id="Layer_1"
+                    style="enable-background:new 0 0 128 128;" viewBox="0 0 128 128" width="128px" xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g>
+                      <path
+                        d="M36.108,110.473l70.436-70.436L87.963,21.457L17.526,91.893c-0.378,0.302-0.671,0.716-0.803,1.22   l-5.476,20.803c-0.01,0.04-0.01,0.082-0.019,0.121c-0.018,0.082-0.029,0.162-0.039,0.247c-0.007,0.075-0.009,0.147-0.009,0.222   c-0.001,0.077,0.001,0.147,0.009,0.225c0.01,0.084,0.021,0.166,0.039,0.246c0.008,0.04,0.008,0.082,0.019,0.121   c0.007,0.029,0.021,0.055,0.031,0.083c0.023,0.078,0.053,0.154,0.086,0.23c0.029,0.067,0.057,0.134,0.09,0.196   c0.037,0.066,0.077,0.127,0.121,0.189c0.041,0.063,0.083,0.126,0.13,0.184c0.047,0.059,0.1,0.109,0.152,0.162   c0.053,0.054,0.105,0.105,0.163,0.152c0.056,0.048,0.119,0.09,0.182,0.131c0.063,0.043,0.124,0.084,0.192,0.12   c0.062,0.033,0.128,0.062,0.195,0.09c0.076,0.033,0.151,0.063,0.23,0.087c0.028,0.009,0.054,0.023,0.083,0.031   c0.04,0.01,0.081,0.01,0.121,0.02c0.081,0.017,0.162,0.028,0.246,0.037c0.077,0.009,0.148,0.011,0.224,0.01   c0.075,0,0.147-0.001,0.223-0.008c0.084-0.011,0.166-0.022,0.247-0.039c0.04-0.01,0.082-0.01,0.121-0.02l20.804-5.475   C35.393,111.146,35.808,110.853,36.108,110.473z M19.651,108.349c-0.535-0.535-1.267-0.746-1.964-0.649l3.183-12.094l11.526,11.525   L20.3,110.313C20.398,109.616,20.188,108.884,19.651,108.349z"
+                        fill="" />
+                      <path d="M109.702,36.879l-18.58-18.581l7.117-7.117c0,0,12.656,4.514,18.58,18.582L109.702,36.879z"
+                        fill="" />
+                    </g>
+                  </svg>
+                </a>
+                <button class="post__btn-text-2 post__btn-text" type="button" data-subscribe="0">
+                  <span class="post__span">Подписаться</span>
+                  <svg class="post__btn-2 post__btn" role="img" aria-label="Подписаться на человека" width="20"
+                    height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M11 10C11.1035 10 11.2052 10.0079 11.3045 10.023C10.9143 10.302 10.5621 10.6308 10.2572 11H4C3.44772 11 3 11.4477 3 12V13.5C3 14.9071 4.57862 16 7.5 16C8.11725 16 8.67455 15.9512 9.16969 15.861C9.25335 16.1896 9.36661 16.5065 9.50646 16.8085C8.90367 16.9334 8.23233 17 7.5 17C4.08805 17 2 15.5544 2 13.5V12C2 10.8954 2.89543 10 4 10H11Z"
+                      fill="" />
+                    <path
+                      d="M17 6.5C17 7.88071 15.8807 9 14.5 9C13.1193 9 12 7.88071 12 6.5C12 5.11929 13.1193 4 14.5 4C15.8807 4 17 5.11929 17 6.5ZM14.5 5C13.6716 5 13 5.67157 13 6.5C13 7.32843 13.6716 8 14.5 8C15.3284 8 16 7.32843 16 6.5C16 5.67157 15.3284 5 14.5 5Z"
+                      fill="" />
+                    <path
+                      d="M7.5 2C9.433 2 11 3.567 11 5.5C11 7.433 9.433 9 7.5 9C5.567 9 4 7.433 4 5.5C4 3.567 5.567 2 7.5 2ZM7.5 3C6.11929 3 5 4.11929 5 5.5C5 6.88071 6.11929 8 7.5 8C8.88071 8 10 6.88071 10 5.5C10 4.11929 8.88071 3 7.5 3Z"
+                      fill="" />
+                    <path
+                      d="M19 14.5C19 16.9853 16.9853 19 14.5 19C12.0147 19 10 16.9853 10 14.5C10 12.0147 12.0147 10 14.5 10C16.9853 10 19 12.0147 19 14.5ZM15 12.5C15 12.2239 14.7761 12 14.5 12C14.2239 12 14 12.2239 14 12.5V14H12.5C12.2239 14 12 14.2239 12 14.5C12 14.7761 12.2239 15 12.5 15H14V16.5C14 16.7761 14.2239 17 14.5 17C14.7761 17 15 16.7761 15 16.5V15H16.5C16.7761 15 17 14.7761 17 14.5C17 14.2239 16.7761 14 16.5 14H15V12.5Z"
+                      fill="" />
+                  </svg>
+                </button>
+                <a class="post__btn-text-3 post__btn-text" href="#">
+                  Написать
+                  <svg class="post__btn-3 post__btn" role="img" aria-label="Написать сообщение"
+                    xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                    <path
+                      d="M24.581 12.331v-2.165l-8.581 5.373-8.581-5.373v2.165l8.581 5.293 8.581-5.293zM24.581 8c1.123 0 2.085 0.962 2.085 2.165v12.832c0 1.123-0.962 2.165-2.085 2.165h-17.163c-1.123 0-2.085-0.962-2.085-2.165v-12.832c0-1.123 0.962-2.165 2.085-2.165 0 0 17.163 0 17.163 0z"
+                      fill=""></path>
+                  </svg>
+                </a>
+                <button class="post__btn-text-4 post__btn-text" type="button">
+                  Пожаловаться
+                  <svg class="post__btn-4 post__btn" role="img" aria-label="Пожаловаться на человека"
+                    xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12">
+                    <path fill=""
+                      d="M10 2.503l1.29 1.248a.426.426 0 00.588 0 .393.393 0 000-.57L10.59 1.934 11.88.685a.394.394 0 00-.013-.557.427.427 0 00-.576-.013L10 1.364 8.71.118a.426.426 0 00-.4-.104.41.41 0 00-.295.284.394.394 0 00.108.389L9.41 1.933 8.122 3.18a.393.393 0 000 .57.423.423 0 00.589 0L10 2.504v-.002zm-2.003 8.939a.5.5 0 01-.994.116C6.833 10.108 5.544 9 4 9S1.167 10.108.997 11.558a.5.5 0 01-.994-.116C.234 9.48 1.956 8 4 8c2.044 0 3.766 1.48 3.997 3.442zM4 7a2.5 2.5 0 110-5 2.5 2.5 0 010 5zm0-1a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="post__image">
+            <img class="post__watch-img" src="images/slider/slider-img13.jpg" alt="Фотография с места посещения">
+          </div>
+          <div class="post__content">
+            <h2 class="post__content-title">
+              Поездка во Францию
+            </h2>
+            <p class="post__content-text">
+              Ищем компанию людей, чтобы вместе здорово отдохнуть во Франции. Также можно взять автобусные туры или
+              экскурсии. Свои предложения как можно хорошо провести время во Франции присылайте в личку!
+            </p>
+            <div class="post__content-info">
+              <div class="post__content-place">
+                <svg class="post__icon-place" role="img" aria-label="Местоположение" width="11" height="16"
+                  viewBox="0 0 11 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M5.5 0C2.45929 0 0 2.504 0 5.6C0 9.8 5.5 16 5.5 16C5.5 16 11 9.8 11 5.6C11 2.504 8.54071 0 5.5 0ZM5.5 7.6C4.41571 7.6 3.53571 6.704 3.53571 5.6C3.53571 4.496 4.41571 3.6 5.5 3.6C6.58429 3.6 7.46429 4.496 7.46429 5.6C7.46429 6.704 6.58429 7.6 5.5 7.6Z"
+                    fill="" />
+                </svg>
+                Париж, Франция
+              </div>
+              <div class="post__content-data">
+                <svg class="post__icon-data" role="img" aria-label="Запланированная дата посещения" width="14"
+                  height="16" viewBox="0 0 14 16" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M4.66667 7.2H3.11111V8.8H4.66667V7.2ZM7.77778 7.2H6.22222V8.8H7.77778V7.2ZM10.8889 7.2H9.33333V8.8H10.8889V7.2ZM12.4444 1.6H11.6667V0H10.1111V1.6H3.88889V0H2.33333V1.6H1.55556C0.692222 1.6 0.00777778 2.32 0.00777778 3.2L0 14.4C0 15.28 0.692222 16 1.55556 16H12.4444C13.3 16 14 15.28 14 14.4V3.2C14 2.32 13.3 1.6 12.4444 1.6ZM12.4444 14.4H1.55556V5.6H12.4444V14.4Z"
+                    fill="" />
+                </svg>
+                3 Сен, 2022 - 25 Сен, 2022
+              </div>
+              <div class="post__content-people">
+                <svg class="post__icon-people" role="img" aria-label="Сколько поедет" width="13" height="13"
+                  viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M6.5 0C2.912 0 0 2.912 0 6.5C0 10.088 2.912 13 6.5 13C10.088 13 13 10.088 13 6.5C13 2.912 10.088 0 6.5 0ZM6.5 1.95C7.579 1.95 8.45 2.821 8.45 3.9C8.45 4.979 7.579 5.85 6.5 5.85C5.421 5.85 4.55 4.979 4.55 3.9C4.55 2.821 5.421 1.95 6.5 1.95ZM6.5 11.18C4.875 11.18 3.4385 10.348 2.6 9.087C2.6195 7.7935 5.2 7.085 6.5 7.085C7.7935 7.085 10.3805 7.7935 10.4 9.087C9.5615 10.348 8.125 11.18 6.5 11.18Z"
+                    fill="" />
+                </svg>
+                3 Взрослых <span></span>
+              </div>
+            </div>
+            <div class="post__images-followers__wrapper">
+              <div class="images-followers">
+                <div class="images-followers__wrapper-profile">
+                  <a class="images-followers__wrapper-img fig" href="#">
+                    <img class="images-followers__people-img" src="images/group-chat/img14.jpg"
+                      alt="Профильная фотография">
+                  </a>
+                  <a class="images-followers__wrapper-img fig" href="#">
+                    <img class="images-followers__people-img" src="images/group-chat/img16.jpg"
+                      alt="Профильная фотография">
+                  </a>
+                  <a class="images-followers__wrapper-img fig" href="#">
+                    <img class="images-followers__people-img" src="images/group-chat/img12.jpg"
+                      alt="Профильная фотография">
+                  </a>
+                  <a class="images-followers__circle fig" href="#">
+                    +12
+                  </a>
+                </div>
+                <div class="images-followers__action">
+                  <button class="content-chat__link" type="button"
+                    onclick="this.className = (this.className == 'content-chat__link' ? 'content-chat__link-change' : 'content-chat__link')">
+                    <svg class="content-chat__heart" role="img" aria-label="Кнопка 'нравиться'" width="13" height="12"
+                      viewBox="0 0 13 12" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M6.5 12L5.5575 11.1368C2.21 8.08283 0 6.06866 0 3.59673C0 1.58256 1.573 0 3.575 0C4.706 0 5.7915 0.5297 6.5 1.36676C7.2085 0.5297 8.294 0 9.425 0C11.427 0 13 1.58256 13 3.59673C13 6.06866 10.79 8.08283 7.4425 11.1433L6.5 12Z"
+                        fill="" />
+                    </svg>
+                    Нравиться
+                  </button>
+                  <a class="images-followers__link images-followers__link--hover" href="#">
+                    <svg class="images-followers__chat" role="img" aria-label="Коментарий" width="22" height="22"
+                      viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M19.8 0H2.2C0.99 0 0.011 0.99 0.011 2.2L0 22L4.4 17.6H19.8C21.01 17.6 22 16.61 22 15.4V2.2C22 0.99 21.01 0 19.8 0ZM17.6 13.2H4.4V11H17.6V13.2ZM17.6 9.9H4.4V7.7H17.6V9.9ZM17.6 6.6H4.4V4.4H17.6V6.6Z"
+                        fill="" />
+                    </svg>
+                    Коментарий
+                  </a>
+                  <a class="images-followers__link images-followers__link--hover2" href="#">
+                    <svg class="images-followers__share" role="img" aria-label="Поделиться" width="16" height="18"
+                      viewBox="0 0 16 18" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M13.3333 12.7229C12.6578 12.7229 12.0533 12.994 11.5911 13.4187L5.25333 9.66867C5.29778 9.46084 5.33333 9.25301 5.33333 9.03614C5.33333 8.81928 5.29778 8.61145 5.25333 8.40361L11.52 4.68976C12 5.14157 12.6311 5.42169 13.3333 5.42169C14.8089 5.42169 16 4.21084 16 2.71084C16 1.21084 14.8089 0 13.3333 0C11.8578 0 10.6667 1.21084 10.6667 2.71084C10.6667 2.92771 10.7022 3.13554 10.7467 3.34337L4.48 7.05723C4 6.60542 3.36889 6.3253 2.66667 6.3253C1.19111 6.3253 0 7.53614 0 9.03614C0 10.5361 1.19111 11.747 2.66667 11.747C3.36889 11.747 4 11.4669 4.48 11.0151L10.8089 14.7741C10.7644 14.9639 10.7378 15.1627 10.7378 15.3614C10.7378 16.8163 11.9022 18 13.3333 18C14.7644 18 15.9289 16.8163 15.9289 15.3614C15.9289 13.9066 14.7644 12.7229 13.3333 12.7229Z"
+                        fill="" />
+                    </svg>
+                    Поделиться
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="statistics__wrapper-followers">
+        <div class="followers">
+          <div class="followers__inner">
+            <h3 class="followers__title">
+              Подписчики
+            </h3>
+            <div class="followers__item">
+              <a class="followers__link" href="#">
+                <img class="followers__img" src="images/statistics/1.jpg" alt="Перейти на страницу подписчика">
+                <div class="followers__wrapper">
+                  <div class="followers__name">
+                    Дахён
+                  </div>
+                  <p class="followers__text">
+                    8 поездки, 73 подписчика
+                  </p>
+                </div>
+              </a>
+              <button class="followers__btn" type="button"
+                onclick="this.className = (this.className == 'followers__btn' ? 'followers__btn-change' : 'followers__btn')">
+                <span class="followers__old">Подписаться</span><span class="followers__change">Подписан</span>
+              </button>
+            </div>
+            <div class="followers__item">
+              <a class="followers__link" href="#">
+                <img class="followers__img" src="images/statistics/4.jpg" alt="Перейти на страницу подписчика">
+                <div class="followers__wrapper">
+                  <div class="followers__name">
+                    Николай и Наталья
+                  </div>
+                  <p class="followers__text">
+                    11 поездок, 108 подписчиков
+                  </p>
+                </div>
+              </a>
+              <button class="followers__btn" type="button"
+                onclick="this.className = (this.className == 'followers__btn' ? 'followers__btn-change' : 'followers__btn')">
+                <span class="followers__old">Подписаться</span><span class="followers__change">Подписан</span>
+              </button>
+            </div>
+            <div class="followers__item">
+              <a class="followers__link" href="#">
+                <img class="followers__img" src="images/statistics/3.jpg" alt="Перейти на страницу подписчика">
+                <div class="followers__wrapper">
+                  <div class="followers__name">
+                    Никита
+                  </div>
+                  <p class="followers__text">
+                    4 поездки, 18 подспичиков
+                  </p>
+                </div>
+              </a>
+              <button class="followers__btn" type="button"
+                onclick="this.className = (this.className == 'followers__btn' ? 'followers__btn-change' : 'followers__btn')">
+                <span class="followers__old">Подписаться</span><span class="followers__change">Подписан</span>
+              </button>
+            </div>
+            <div class="followers__item">
+              <a class="followers__link" href="#">
+                <img class="followers__img" src="images/statistics/2.jpg" alt="Перейти на страницу подписчика">
+                <div class="followers__wrapper">
+                  <div class="followers__name">
+                    Джейн Уайт
+                  </div>
+                  <p class="followers__text">
+                    17 поездок, 213 подписчиков
+                  </p>
+                </div>
+              </a>
+              <button class="followers__btn" type="button"
+                onclick="this.className = (this.className == 'followers__btn' ? 'followers__btn-change' : 'followers__btn')">
+                <span class="followers__old">Подписаться</span><span class="followers__change">Подписан</span>
+              </button>
+            </div>
+            <div class="followers__item followers__item--last">
+              <a class="followers__link" href="#">
+                <img class="followers__img" src="images/statistics/5.jpg" alt="Перейти на страницу подписчика">
+                <div class="followers__wrapper">
+                  <div class="followers__name">
+                    Эрик
+                  </div>
+                  <p class="followers__text">
+                    7 поездок, 52 подписчика
+                  </p>
+                </div>
+              </a>
+              <button class="followers__btn" type="button"
+                onclick="this.className = (this.className == 'followers__btn' ? 'followers__btn-change' : 'followers__btn')">
+                <span class="followers__old">Подписаться</span><span class="followers__change">Подписан</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="statistics__wrapper-slider">
+          <div class="slider-trip">
+            <h4 class="slider-trip__title">
+              Популярные <br>
+              поездки
+            </h4>
+            <div class="slider-trip__inner">
+              <a class="slider__link" href="#">
+                <div class="cart-people">
+                  <div class="cart-people__img-wrapper">
+                    <div class="cart-people__wrapper-img">
+                      <img class="cart-people__img" src="images/slider/slider-img2.jpg" alt="Фотография профиля">
+                    </div>
+                    <div class="cart-people__content">
+                      <div class="cart-people__point">
+                        <svg class="cart-people__icon" role="img" aria-label="Место поездки" width="11" height="16"
+                          viewBox="0 0 11 16" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M5.5 0C2.45929 0 0 2.504 0 5.6C0 9.8 5.5 16 5.5 16C5.5 16 11 9.8 11 5.6C11 2.504 8.54071 0 5.5 0ZM5.5 7.6C4.41571 7.6 3.53571 6.704 3.53571 5.6C3.53571 4.496 4.41571 3.6 5.5 3.6C6.58429 3.6 7.46429 4.496 7.46429 5.6C7.46429 6.704 6.58429 7.6 5.5 7.6Z"
+                            fill="" />
+                        </svg>
+                        Сербия
+                      </div>
+                      <h4 class="cart-people__point-title">
+                        Смедерево
+                      </h4>
+                      <ul class="cart-people__list">
+                        <li class="cart-people__item cart-people--data">
+                          17 Июл, 2022 - 8 Авг, 2022
+                        </li>
+                        <li class="cart-people__item cart-people--icon">
+                          2 Взрослых <span>/</span> 2 Ребёнка
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="slider__link" href="#">
+                <div class="cart-people">
+                  <div class="cart-people__img-wrapper">
+                    <div class="cart-people__wrapper-img">
+                      <img class="cart-people__img" src="images/slider/slider-img4.jpg" alt="Фотография профиля">
+                    </div>
+                    <div class="cart-people__content">
+                      <div class="cart-people__point">
+                        <svg class="cart-people__icon" role="img" aria-label="Место поездки" width="11" height="16"
+                          viewBox="0 0 11 16" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M5.5 0C2.45929 0 0 2.504 0 5.6C0 9.8 5.5 16 5.5 16C5.5 16 11 9.8 11 5.6C11 2.504 8.54071 0 5.5 0ZM5.5 7.6C4.41571 7.6 3.53571 6.704 3.53571 5.6C3.53571 4.496 4.41571 3.6 5.5 3.6C6.58429 3.6 7.46429 4.496 7.46429 5.6C7.46429 6.704 6.58429 7.6 5.5 7.6Z"
+                            fill="" />
+                        </svg>
+                        Флорида
+                      </div>
+                      <h4 class="cart-people__point-title">
+                        Порт-Шарлотт
+                      </h4>
+                      <ul class="cart-people__list">
+                        <li class="cart-people__item cart-people--data">
+                          29 Июн, 2022 - 9 Июл, 2022
+                        </li>
+                        <li class="cart-people__item cart-people--icon">
+                          2 Взрослых <span></span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="slider__link" href="#">
+                <div class="cart-people">
+                  <div class="cart-people__img-wrapper">
+                    <div class="cart-people__wrapper-img">
+                      <img class="cart-people__img" src="images/slider/slider-img3.jpg" alt="Фотография профиля">
+                    </div>
+                    <div class="cart-people__content">
+                      <div class="cart-people__point">
+                        <svg class="cart-people__icon" role="img" aria-label="Место поездки" width="11" height="16"
+                          viewBox="0 0 11 16" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M5.5 0C2.45929 0 0 2.504 0 5.6C0 9.8 5.5 16 5.5 16C5.5 16 11 9.8 11 5.6C11 2.504 8.54071 0 5.5 0ZM5.5 7.6C4.41571 7.6 3.53571 6.704 3.53571 5.6C3.53571 4.496 4.41571 3.6 5.5 3.6C6.58429 3.6 7.46429 4.496 7.46429 5.6C7.46429 6.704 6.58429 7.6 5.5 7.6Z"
+                            fill="" />
+                        </svg>
+                        Исландия
+                      </div>
+                      <h4 class="cart-people__point-title">
+                        Акурейри
+                      </h4>
+                      <ul class="cart-people__list">
+                        <li class="cart-people__item cart-people--data">
+                          4 Авг, 2022 - 27 Авг, 2022
+                        </li>
+                        <li class="cart-people__item cart-people--icon">
+                          2 Взрослых <span></span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="slider__link" href="#">
+                <div class="cart-people">
+                  <div class="cart-people__img-wrapper">
+                    <div class="cart-people__wrapper-img">
+                      <img class="cart-people__img" src="images/slider/slider-img5.jpg" alt="Фотография профиля">
+                    </div>
+                    <div class="cart-people__content">
+                      <div class="cart-people__point">
+                        <svg class="cart-people__icon" role="img" aria-label="Место поездки" width="11" height="16"
+                          viewBox="0 0 11 16" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M5.5 0C2.45929 0 0 2.504 0 5.6C0 9.8 5.5 16 5.5 16C5.5 16 11 9.8 11 5.6C11 2.504 8.54071 0 5.5 0ZM5.5 7.6C4.41571 7.6 3.53571 6.704 3.53571 5.6C3.53571 4.496 4.41571 3.6 5.5 3.6C6.58429 3.6 7.46429 4.496 7.46429 5.6C7.46429 6.704 6.58429 7.6 5.5 7.6Z"
+                            fill="" />
+                        </svg>
+                        Беларусь
+                      </div>
+                      <h4 class="cart-people__point-title">
+                        Сосны
+                      </h4>
+                      <ul class="cart-people__list">
+                        <li class="cart-people__item cart-people--data">
+                          20 Авг, 2022 - 2 Сен, 2022
+                        </li>
+                        <li class="cart-people__item cart-people--icon">
+                          2 Взрослых <span></span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+  </main>
+
+  <script src="js/main.min.js"></script>
+
+</body>
+</html>
